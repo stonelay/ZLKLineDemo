@@ -1,0 +1,919 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48D3C1B82118556E004A04D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D3C1512118556E004A04D2 /* Assets.xcassets */; };
+		48D3C1B92118556E004A04D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D3C1522118556E004A04D2 /* LaunchScreen.storyboard */; };
+		48D3C1BA2118556E004A04D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D3C1542118556E004A04D2 /* Main.storyboard */; };
+		48D3C1BB2118556E004A04D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1562118556E004A04D2 /* main.m */; };
+		48D3C1BC2118556E004A04D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1572118556E004A04D2 /* AppDelegate.m */; };
+		48D3C1BD2118556E004A04D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48D3C1592118556E004A04D2 /* Info.plist */; };
+		48D3C2A6211857BD004A04D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1BF211857BC004A04D2 /* ViewController.m */; };
+		48D3C2A7211857BD004A04D2 /* ZLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1C1211857BC004A04D2 /* ZLViewController.m */; };
+		48D3C2A8211857BD004A04D2 /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1C3211857BC004A04D2 /* MainViewCell.m */; };
+		48D3C2F5211857BD004A04D2 /* NSObject+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C282211857BC004A04D2 /* NSObject+Safe.m */; };
+		48D3C2F6211857BD004A04D2 /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C283211857BC004A04D2 /* NSMutableArray+Safe.m */; };
+		48D3C2F7211857BD004A04D2 /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C286211857BC004A04D2 /* NSMutableDictionary+Safe.m */; };
+		48D3C2F8211857BD004A04D2 /* NSMutableSet+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C288211857BD004A04D2 /* NSMutableSet+Safe.m */; };
+		48D3C2F9211857BD004A04D2 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C28C211857BD004A04D2 /* NSDictionary+Safe.m */; };
+		48D3C2FA211857BD004A04D2 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C28E211857BD004A04D2 /* NSArray+Safe.m */; };
+		48D3C2FB211857BD004A04D2 /* UIView+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C28F211857BD004A04D2 /* UIView+ZLEX.m */; };
+		48D3C2FC211857BD004A04D2 /* NSObject+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C291211857BD004A04D2 /* NSObject+ZLEX.m */; };
+		48D3C2FD211857BD004A04D2 /* ScreenAuotoSizeScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C294211857BD004A04D2 /* ScreenAuotoSizeScale.m */; };
+		48D3C2FE211857BD004A04D2 /* NSString+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C295211857BD004A04D2 /* NSString+ZLEX.m */; };
+		48D3C2FF211857BD004A04D2 /* CALayer+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C296211857BD004A04D2 /* CALayer+ZLEX.m */; };
+		48D3C300211857BD004A04D2 /* UIImage+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C299211857BD004A04D2 /* UIImage+ZLEX.m */; };
+		48D3C301211857BD004A04D2 /* UIView+QuickNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C29A211857BD004A04D2 /* UIView+QuickNew.m */; };
+		48D3C302211857BD004A04D2 /* UIButton+ZLEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C29B211857BD004A04D2 /* UIButton+ZLEX.m */; };
+		48D3C303211857BD004A04D2 /* GLLoadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C29F211857BD004A04D2 /* GLLoadTool.m */; };
+		48D3C35E211859BC004A04D2 /* ZLKDJGridePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C307211859BC004A04D2 /* ZLKDJGridePainter.m */; };
+		48D3C35F211859BC004A04D2 /* ZLKDJPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C308211859BC004A04D2 /* ZLKDJPainter.m */; };
+		48D3C360211859BC004A04D2 /* ZLRSIGridePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C309211859BC004A04D2 /* ZLRSIGridePainter.m */; };
+		48D3C361211859BC004A04D2 /* ZLRSIPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C30A211859BC004A04D2 /* ZLRSIPainter.m */; };
+		48D3C362211859BC004A04D2 /* LZCandleGridePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C312211859BC004A04D2 /* LZCandleGridePainter.m */; };
+		48D3C363211859BC004A04D2 /* ZLCandlePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C313211859BC004A04D2 /* ZLCandlePainter.m */; };
+		48D3C364211859BC004A04D2 /* ZLGridePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C314211859BC004A04D2 /* ZLGridePainter.m */; };
+		48D3C365211859BC004A04D2 /* ZLBasePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C316211859BC004A04D2 /* ZLBasePainter.m */; };
+		48D3C366211859BC004A04D2 /* ZLMATransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C319211859BC004A04D2 /* ZLMATransformer.m */; };
+		48D3C367211859BC004A04D2 /* ZLKDJTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C31A211859BC004A04D2 /* ZLKDJTransformer.m */; };
+		48D3C368211859BC004A04D2 /* ZLRSITransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C31F211859BC004A04D2 /* ZLRSITransformer.m */; };
+		48D3C369211859BC004A04D2 /* ZLDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C320211859BC004A04D2 /* ZLDataTransformer.m */; };
+		48D3C36A211859BC004A04D2 /* ZLBOLLTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C322211859BC004A04D2 /* ZLBOLLTransformer.m */; };
+		48D3C36B211859BC004A04D2 /* ZLMAParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C324211859BC004A04D2 /* ZLMAParam.m */; };
+		48D3C36C211859BC004A04D2 /* ZLKDJParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C327211859BC004A04D2 /* ZLKDJParam.m */; };
+		48D3C36D211859BC004A04D2 /* ZLGuideParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C328211859BC004A04D2 /* ZLGuideParam.m */; };
+		48D3C36E211859BC004A04D2 /* ZLBOLLParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C32B211859BC004A04D2 /* ZLBOLLParam.m */; };
+		48D3C36F211859BC004A04D2 /* ZLRSIParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C32C211859BC004A04D2 /* ZLRSIParam.m */; };
+		48D3C370211859BC004A04D2 /* ZLGuideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C32F211859BC004A04D2 /* ZLGuideModel.m */; };
+		48D3C371211859BC004A04D2 /* ZLGuideDataPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C330211859BC004A04D2 /* ZLGuideDataPack.m */; };
+		48D3C372211859BC004A04D2 /* ZLGuideDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C331211859BC004A04D2 /* ZLGuideDataType.m */; };
+		48D3C373211859BC004A04D2 /* ZLGuideMAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C333211859BC004A04D2 /* ZLGuideMAModel.m */; };
+		48D3C374211859BC004A04D2 /* ZLGuideKDJModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C335211859BC004A04D2 /* ZLGuideKDJModel.m */; };
+		48D3C375211859BC004A04D2 /* ZLGuideBOLLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C336211859BC004A04D2 /* ZLGuideBOLLModel.m */; };
+		48D3C376211859BC004A04D2 /* ZLGuideRSIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C339211859BC004A04D2 /* ZLGuideRSIModel.m */; };
+		48D3C377211859BC004A04D2 /* ZLBOLLPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C340211859BC004A04D2 /* ZLBOLLPainter.m */; };
+		48D3C378211859BC004A04D2 /* ZLMAPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C341211859BC004A04D2 /* ZLMAPainter.m */; };
+		48D3C379211859BC004A04D2 /* ZLGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C347211859BC004A04D2 /* ZLGuideManager.m */; };
+		48D3C37A211859BC004A04D2 /* MockServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C349211859BC004A04D2 /* MockServer.m */; };
+		48D3C37B211859BC004A04D2 /* N225.xml in Resources */ = {isa = PBXBuildFile; fileRef = 48D3C34B211859BC004A04D2 /* N225.xml */; };
+		48D3C37C211859BC004A04D2 /* ZLQuoteDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C34C211859BC004A04D2 /* ZLQuoteDataCenter.m */; };
+		48D3C37D211859BC004A04D2 /* KLineDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C34F211859BC004A04D2 /* KLineDemoController.m */; };
+		48D3C37E211859BC004A04D2 /* ZLPaintCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C351211859BC004A04D2 /* ZLPaintCore.m */; };
+		48D3C37F211859BC004A04D2 /* ZLPaintAssistScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C352211859BC004A04D2 /* ZLPaintAssistScene.m */; };
+		48D3C380211859BC004A04D2 /* ZLBasePaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C353211859BC004A04D2 /* ZLBasePaintView.m */; };
+		48D3C381211859BC004A04D2 /* ZLPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C355211859BC004A04D2 /* ZLPaintView.m */; };
+		48D3C382211859BC004A04D2 /* ZLPaintMainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C35A211859BC004A04D2 /* ZLPaintMainScene.m */; };
+		48D3C383211859BC004A04D2 /* KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C35C211859BC004A04D2 /* KLineModel.m */; };
+		C5E420434A830FBAEAD75B17 /* libPods-ZLKLineDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8259BE719CBDAB0E3F1DE8E8 /* libPods-ZLKLineDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		21D613B7FFE29201A2E18D7D /* Pods-ZLKLineDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLKLineDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZLKLineDemo/Pods-ZLKLineDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		48D3C04E21184CE9004A04D2 /* ZLKLineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLKLineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D3C1502118556E004A04D2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		48D3C1512118556E004A04D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48D3C1532118556E004A04D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48D3C1552118556E004A04D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48D3C1562118556E004A04D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48D3C1572118556E004A04D2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		48D3C1582118556E004A04D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		48D3C1592118556E004A04D2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D3C1BF211857BC004A04D2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48D3C1C1211857BC004A04D2 /* ZLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLViewController.m; sourceTree = "<group>"; };
+		48D3C1C2211857BC004A04D2 /* ZLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLViewController.h; sourceTree = "<group>"; };
+		48D3C1C3211857BC004A04D2 /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
+		48D3C27F211857BC004A04D2 /* UIView+QuickNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QuickNew.h"; sourceTree = "<group>"; };
+		48D3C280211857BC004A04D2 /* UIImage+ZLEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZLEX.h"; sourceTree = "<group>"; };
+		48D3C282211857BC004A04D2 /* NSObject+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Safe.m"; sourceTree = "<group>"; };
+		48D3C283211857BC004A04D2 /* NSMutableArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Safe.m"; sourceTree = "<group>"; };
+		48D3C284211857BC004A04D2 /* SafeObjectMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeObjectMacro.h; sourceTree = "<group>"; };
+		48D3C285211857BC004A04D2 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		48D3C286211857BC004A04D2 /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
+		48D3C287211857BC004A04D2 /* NSArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		48D3C288211857BD004A04D2 /* NSMutableSet+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+Safe.m"; sourceTree = "<group>"; };
+		48D3C289211857BD004A04D2 /* NSObject+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Safe.h"; sourceTree = "<group>"; };
+		48D3C28A211857BD004A04D2 /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
+		48D3C28B211857BD004A04D2 /* NSMutableDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Safe.h"; sourceTree = "<group>"; };
+		48D3C28C211857BD004A04D2 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
+		48D3C28D211857BD004A04D2 /* NSMutableSet+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+Safe.h"; sourceTree = "<group>"; };
+		48D3C28E211857BD004A04D2 /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
+		48D3C28F211857BD004A04D2 /* UIView+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZLEX.m"; sourceTree = "<group>"; };
+		48D3C290211857BD004A04D2 /* ZLPreMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPreMacro.h; sourceTree = "<group>"; };
+		48D3C291211857BD004A04D2 /* NSObject+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZLEX.m"; sourceTree = "<group>"; };
+		48D3C292211857BD004A04D2 /* UIButton+ZLEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZLEX.h"; sourceTree = "<group>"; };
+		48D3C293211857BD004A04D2 /* ScreenMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenMacro.h; sourceTree = "<group>"; };
+		48D3C294211857BD004A04D2 /* ScreenAuotoSizeScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenAuotoSizeScale.m; sourceTree = "<group>"; };
+		48D3C295211857BD004A04D2 /* NSString+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZLEX.m"; sourceTree = "<group>"; };
+		48D3C296211857BD004A04D2 /* CALayer+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+ZLEX.m"; sourceTree = "<group>"; };
+		48D3C297211857BD004A04D2 /* GLLoadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLLoadTool.h; sourceTree = "<group>"; };
+		48D3C298211857BD004A04D2 /* UIView+ZLEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZLEX.h"; sourceTree = "<group>"; };
+		48D3C299211857BD004A04D2 /* UIImage+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZLEX.m"; sourceTree = "<group>"; };
+		48D3C29A211857BD004A04D2 /* UIView+QuickNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QuickNew.m"; sourceTree = "<group>"; };
+		48D3C29B211857BD004A04D2 /* UIButton+ZLEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZLEX.m"; sourceTree = "<group>"; };
+		48D3C29C211857BD004A04D2 /* SystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMacro.h; sourceTree = "<group>"; };
+		48D3C29D211857BD004A04D2 /* NSObject+ZLEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZLEX.h"; sourceTree = "<group>"; };
+		48D3C29E211857BD004A04D2 /* UtilMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilMacro.h; sourceTree = "<group>"; };
+		48D3C29F211857BD004A04D2 /* GLLoadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLoadTool.m; sourceTree = "<group>"; };
+		48D3C2A0211857BD004A04D2 /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
+		48D3C2A1211857BD004A04D2 /* CALayer+ZLEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+ZLEX.h"; sourceTree = "<group>"; };
+		48D3C2A2211857BD004A04D2 /* NSString+ZLEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZLEX.h"; sourceTree = "<group>"; };
+		48D3C2A3211857BD004A04D2 /* ScreenAuotoSizeScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenAuotoSizeScale.h; sourceTree = "<group>"; };
+		48D3C2A4211857BD004A04D2 /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
+		48D3C2A5211857BD004A04D2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48D3C307211859BC004A04D2 /* ZLKDJGridePainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLKDJGridePainter.m; sourceTree = "<group>"; };
+		48D3C308211859BC004A04D2 /* ZLKDJPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLKDJPainter.m; sourceTree = "<group>"; };
+		48D3C309211859BC004A04D2 /* ZLRSIGridePainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLRSIGridePainter.m; sourceTree = "<group>"; };
+		48D3C30A211859BC004A04D2 /* ZLRSIPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLRSIPainter.m; sourceTree = "<group>"; };
+		48D3C30B211859BC004A04D2 /* ZLKDJGridePainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLKDJGridePainter.h; sourceTree = "<group>"; };
+		48D3C30C211859BC004A04D2 /* ZLKDJPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLKDJPainter.h; sourceTree = "<group>"; };
+		48D3C30D211859BC004A04D2 /* ZLRSIGridePainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLRSIGridePainter.h; sourceTree = "<group>"; };
+		48D3C30E211859BC004A04D2 /* ZLRSIPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLRSIPainter.h; sourceTree = "<group>"; };
+		48D3C310211859BC004A04D2 /* ZLCandlePainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCandlePainter.h; sourceTree = "<group>"; };
+		48D3C311211859BC004A04D2 /* LZCandleGridePainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCandleGridePainter.h; sourceTree = "<group>"; };
+		48D3C312211859BC004A04D2 /* LZCandleGridePainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCandleGridePainter.m; sourceTree = "<group>"; };
+		48D3C313211859BC004A04D2 /* ZLCandlePainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCandlePainter.m; sourceTree = "<group>"; };
+		48D3C314211859BC004A04D2 /* ZLGridePainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGridePainter.m; sourceTree = "<group>"; };
+		48D3C315211859BC004A04D2 /* ZLKLinePainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLKLinePainter.h; sourceTree = "<group>"; };
+		48D3C316211859BC004A04D2 /* ZLBasePainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBasePainter.m; sourceTree = "<group>"; };
+		48D3C319211859BC004A04D2 /* ZLMATransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLMATransformer.m; sourceTree = "<group>"; };
+		48D3C31A211859BC004A04D2 /* ZLKDJTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLKDJTransformer.m; sourceTree = "<group>"; };
+		48D3C31B211859BC004A04D2 /* ZLDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLDataTransformer.h; sourceTree = "<group>"; };
+		48D3C31C211859BC004A04D2 /* ZLRSITransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLRSITransformer.h; sourceTree = "<group>"; };
+		48D3C31D211859BC004A04D2 /* ZLBOLLTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLBOLLTransformer.h; sourceTree = "<group>"; };
+		48D3C31E211859BC004A04D2 /* ZLMATransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLMATransformer.h; sourceTree = "<group>"; };
+		48D3C31F211859BC004A04D2 /* ZLRSITransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLRSITransformer.m; sourceTree = "<group>"; };
+		48D3C320211859BC004A04D2 /* ZLDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLDataTransformer.m; sourceTree = "<group>"; };
+		48D3C321211859BC004A04D2 /* ZLKDJTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLKDJTransformer.h; sourceTree = "<group>"; };
+		48D3C322211859BC004A04D2 /* ZLBOLLTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBOLLTransformer.m; sourceTree = "<group>"; };
+		48D3C324211859BC004A04D2 /* ZLMAParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLMAParam.m; sourceTree = "<group>"; };
+		48D3C325211859BC004A04D2 /* ZLRSIParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLRSIParam.h; sourceTree = "<group>"; };
+		48D3C326211859BC004A04D2 /* ZLBOLLParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLBOLLParam.h; sourceTree = "<group>"; };
+		48D3C327211859BC004A04D2 /* ZLKDJParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLKDJParam.m; sourceTree = "<group>"; };
+		48D3C328211859BC004A04D2 /* ZLGuideParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideParam.m; sourceTree = "<group>"; };
+		48D3C329211859BC004A04D2 /* ZLMAParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLMAParam.h; sourceTree = "<group>"; };
+		48D3C32A211859BC004A04D2 /* ZLKDJParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLKDJParam.h; sourceTree = "<group>"; };
+		48D3C32B211859BC004A04D2 /* ZLBOLLParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBOLLParam.m; sourceTree = "<group>"; };
+		48D3C32C211859BC004A04D2 /* ZLRSIParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLRSIParam.m; sourceTree = "<group>"; };
+		48D3C32D211859BC004A04D2 /* ZLGuideParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideParam.h; sourceTree = "<group>"; };
+		48D3C32F211859BC004A04D2 /* ZLGuideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideModel.m; sourceTree = "<group>"; };
+		48D3C330211859BC004A04D2 /* ZLGuideDataPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideDataPack.m; sourceTree = "<group>"; };
+		48D3C331211859BC004A04D2 /* ZLGuideDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideDataType.m; sourceTree = "<group>"; };
+		48D3C333211859BC004A04D2 /* ZLGuideMAModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideMAModel.m; sourceTree = "<group>"; };
+		48D3C334211859BC004A04D2 /* ZLGuideRSIModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideRSIModel.h; sourceTree = "<group>"; };
+		48D3C335211859BC004A04D2 /* ZLGuideKDJModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideKDJModel.m; sourceTree = "<group>"; };
+		48D3C336211859BC004A04D2 /* ZLGuideBOLLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideBOLLModel.m; sourceTree = "<group>"; };
+		48D3C337211859BC004A04D2 /* ZLGuideMAModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideMAModel.h; sourceTree = "<group>"; };
+		48D3C338211859BC004A04D2 /* ZLGuideKDJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideKDJModel.h; sourceTree = "<group>"; };
+		48D3C339211859BC004A04D2 /* ZLGuideRSIModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideRSIModel.m; sourceTree = "<group>"; };
+		48D3C33A211859BC004A04D2 /* ZLGuideBOLLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideBOLLModel.h; sourceTree = "<group>"; };
+		48D3C33B211859BC004A04D2 /* ZLGuideDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideDataType.h; sourceTree = "<group>"; };
+		48D3C33C211859BC004A04D2 /* ZLGuideDataPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideDataPack.h; sourceTree = "<group>"; };
+		48D3C33D211859BC004A04D2 /* ZLGuideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideModel.h; sourceTree = "<group>"; };
+		48D3C33F211859BC004A04D2 /* ZLMAPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLMAPainter.h; sourceTree = "<group>"; };
+		48D3C340211859BC004A04D2 /* ZLBOLLPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBOLLPainter.m; sourceTree = "<group>"; };
+		48D3C341211859BC004A04D2 /* ZLMAPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLMAPainter.m; sourceTree = "<group>"; };
+		48D3C342211859BC004A04D2 /* ZLBOLLPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLBOLLPainter.h; sourceTree = "<group>"; };
+		48D3C343211859BC004A04D2 /* ZLBasePainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLBasePainter.h; sourceTree = "<group>"; };
+		48D3C344211859BC004A04D2 /* ZLGridePainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGridePainter.h; sourceTree = "<group>"; };
+		48D3C346211859BC004A04D2 /* ZLQuoteDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLQuoteDataCenter.h; sourceTree = "<group>"; };
+		48D3C347211859BC004A04D2 /* ZLGuideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideManager.m; sourceTree = "<group>"; };
+		48D3C349211859BC004A04D2 /* MockServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockServer.m; sourceTree = "<group>"; };
+		48D3C34A211859BC004A04D2 /* MockServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockServer.h; sourceTree = "<group>"; };
+		48D3C34B211859BC004A04D2 /* N225.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = N225.xml; sourceTree = "<group>"; };
+		48D3C34C211859BC004A04D2 /* ZLQuoteDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLQuoteDataCenter.m; sourceTree = "<group>"; };
+		48D3C34D211859BC004A04D2 /* ZLGuideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideManager.h; sourceTree = "<group>"; };
+		48D3C34E211859BC004A04D2 /* KLineDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineDemoController.h; sourceTree = "<group>"; };
+		48D3C34F211859BC004A04D2 /* KLineDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineDemoController.m; sourceTree = "<group>"; };
+		48D3C351211859BC004A04D2 /* ZLPaintCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPaintCore.m; sourceTree = "<group>"; };
+		48D3C352211859BC004A04D2 /* ZLPaintAssistScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPaintAssistScene.m; sourceTree = "<group>"; };
+		48D3C353211859BC004A04D2 /* ZLBasePaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBasePaintView.m; sourceTree = "<group>"; };
+		48D3C354211859BC004A04D2 /* ZLPaintMainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPaintMainScene.h; sourceTree = "<group>"; };
+		48D3C355211859BC004A04D2 /* ZLPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPaintView.m; sourceTree = "<group>"; };
+		48D3C356211859BC004A04D2 /* ZLPaintCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPaintCore.h; sourceTree = "<group>"; };
+		48D3C357211859BC004A04D2 /* ZLPaintAssistScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPaintAssistScene.h; sourceTree = "<group>"; };
+		48D3C358211859BC004A04D2 /* ZLBasePaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLBasePaintView.h; sourceTree = "<group>"; };
+		48D3C359211859BC004A04D2 /* ZLPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPaintView.h; sourceTree = "<group>"; };
+		48D3C35A211859BC004A04D2 /* ZLPaintMainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPaintMainScene.m; sourceTree = "<group>"; };
+		48D3C35C211859BC004A04D2 /* KLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineModel.m; sourceTree = "<group>"; };
+		48D3C35D211859BC004A04D2 /* KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineModel.h; sourceTree = "<group>"; };
+		8259BE719CBDAB0E3F1DE8E8 /* libPods-ZLKLineDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZLKLineDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE2F91DB0A2A8E8C11F7550 /* Pods-ZLKLineDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLKLineDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLKLineDemo/Pods-ZLKLineDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48D3C04B21184CE9004A04D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E420434A830FBAEAD75B17 /* libPods-ZLKLineDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48D3C04521184CE9004A04D2 = {
+			isa = PBXGroup;
+			children = (
+				48D3C05021184CE9004A04D2 /* ZLKLineDemo */,
+				48D3C04F21184CE9004A04D2 /* Products */,
+				BF3A4C6CEDB1DF186B0CD445 /* Pods */,
+				7071B7D736516A97C06C35AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48D3C04F21184CE9004A04D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C04E21184CE9004A04D2 /* ZLKLineDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48D3C05021184CE9004A04D2 /* ZLKLineDemo */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C1BE211857BC004A04D2 /* Class */,
+				48D3C14F2118556E004A04D2 /* Supporting Files */,
+			);
+			path = ZLKLineDemo;
+			sourceTree = "<group>";
+		};
+		48D3C14F2118556E004A04D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C1502118556E004A04D2 /* AppDelegate.h */,
+				48D3C1572118556E004A04D2 /* AppDelegate.m */,
+				48D3C1512118556E004A04D2 /* Assets.xcassets */,
+				48D3C1592118556E004A04D2 /* Info.plist */,
+				48D3C1522118556E004A04D2 /* LaunchScreen.storyboard */,
+				48D3C1562118556E004A04D2 /* main.m */,
+				48D3C1542118556E004A04D2 /* Main.storyboard */,
+				48D3C1582118556E004A04D2 /* PrefixHeader.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48D3C1BE211857BC004A04D2 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C304211859BC004A04D2 /* KLine */,
+				48D3C27E211857BC004A04D2 /* Categories */,
+				48D3C1C0211857BC004A04D2 /* FatherController */,
+				48D3C2A4211857BD004A04D2 /* MainViewCell.h */,
+				48D3C1C3211857BC004A04D2 /* MainViewCell.m */,
+				48D3C2A5211857BD004A04D2 /* ViewController.h */,
+				48D3C1BF211857BC004A04D2 /* ViewController.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		48D3C1C0211857BC004A04D2 /* FatherController */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C1C1211857BC004A04D2 /* ZLViewController.m */,
+				48D3C1C2211857BC004A04D2 /* ZLViewController.h */,
+			);
+			path = FatherController;
+			sourceTree = "<group>";
+		};
+		48D3C27E211857BC004A04D2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C281211857BC004A04D2 /* Safe */,
+				48D3C2A0211857BD004A04D2 /* AppMacro.h */,
+				48D3C2A1211857BD004A04D2 /* CALayer+ZLEX.h */,
+				48D3C296211857BD004A04D2 /* CALayer+ZLEX.m */,
+				48D3C297211857BD004A04D2 /* GLLoadTool.h */,
+				48D3C29F211857BD004A04D2 /* GLLoadTool.m */,
+				48D3C29D211857BD004A04D2 /* NSObject+ZLEX.h */,
+				48D3C291211857BD004A04D2 /* NSObject+ZLEX.m */,
+				48D3C2A2211857BD004A04D2 /* NSString+ZLEX.h */,
+				48D3C295211857BD004A04D2 /* NSString+ZLEX.m */,
+				48D3C2A3211857BD004A04D2 /* ScreenAuotoSizeScale.h */,
+				48D3C294211857BD004A04D2 /* ScreenAuotoSizeScale.m */,
+				48D3C293211857BD004A04D2 /* ScreenMacro.h */,
+				48D3C29C211857BD004A04D2 /* SystemMacro.h */,
+				48D3C292211857BD004A04D2 /* UIButton+ZLEX.h */,
+				48D3C29B211857BD004A04D2 /* UIButton+ZLEX.m */,
+				48D3C280211857BC004A04D2 /* UIImage+ZLEX.h */,
+				48D3C299211857BD004A04D2 /* UIImage+ZLEX.m */,
+				48D3C27F211857BC004A04D2 /* UIView+QuickNew.h */,
+				48D3C29A211857BD004A04D2 /* UIView+QuickNew.m */,
+				48D3C298211857BD004A04D2 /* UIView+ZLEX.h */,
+				48D3C28F211857BD004A04D2 /* UIView+ZLEX.m */,
+				48D3C29E211857BD004A04D2 /* UtilMacro.h */,
+				48D3C290211857BD004A04D2 /* ZLPreMacro.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		48D3C281211857BC004A04D2 /* Safe */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C282211857BC004A04D2 /* NSObject+Safe.m */,
+				48D3C283211857BC004A04D2 /* NSMutableArray+Safe.m */,
+				48D3C284211857BC004A04D2 /* SafeObjectMacro.h */,
+				48D3C285211857BC004A04D2 /* NSDictionary+Safe.h */,
+				48D3C286211857BC004A04D2 /* NSMutableDictionary+Safe.m */,
+				48D3C287211857BC004A04D2 /* NSArray+Safe.h */,
+				48D3C288211857BD004A04D2 /* NSMutableSet+Safe.m */,
+				48D3C289211857BD004A04D2 /* NSObject+Safe.h */,
+				48D3C28A211857BD004A04D2 /* NSMutableArray+Safe.h */,
+				48D3C28B211857BD004A04D2 /* NSMutableDictionary+Safe.h */,
+				48D3C28C211857BD004A04D2 /* NSDictionary+Safe.m */,
+				48D3C28D211857BD004A04D2 /* NSMutableSet+Safe.h */,
+				48D3C28E211857BD004A04D2 /* NSArray+Safe.m */,
+			);
+			path = Safe;
+			sourceTree = "<group>";
+		};
+		48D3C304211859BC004A04D2 /* KLine */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C345211859BC004A04D2 /* DataCenter */,
+				48D3C34E211859BC004A04D2 /* KLineDemoController.h */,
+				48D3C34F211859BC004A04D2 /* KLineDemoController.m */,
+				48D3C35B211859BC004A04D2 /* Model */,
+				48D3C305211859BC004A04D2 /* Painter */,
+				48D3C350211859BC004A04D2 /* PaintView */,
+			);
+			path = KLine;
+			sourceTree = "<group>";
+		};
+		48D3C305211859BC004A04D2 /* Painter */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C306211859BC004A04D2 /* AssistPainter */,
+				48D3C30F211859BC004A04D2 /* CandlePainter */,
+				48D3C314211859BC004A04D2 /* ZLGridePainter.m */,
+				48D3C315211859BC004A04D2 /* ZLKLinePainter.h */,
+				48D3C316211859BC004A04D2 /* ZLBasePainter.m */,
+				48D3C317211859BC004A04D2 /* GuideTransformer */,
+				48D3C33E211859BC004A04D2 /* MainPainter */,
+				48D3C343211859BC004A04D2 /* ZLBasePainter.h */,
+				48D3C344211859BC004A04D2 /* ZLGridePainter.h */,
+			);
+			path = Painter;
+			sourceTree = "<group>";
+		};
+		48D3C306211859BC004A04D2 /* AssistPainter */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C307211859BC004A04D2 /* ZLKDJGridePainter.m */,
+				48D3C308211859BC004A04D2 /* ZLKDJPainter.m */,
+				48D3C309211859BC004A04D2 /* ZLRSIGridePainter.m */,
+				48D3C30A211859BC004A04D2 /* ZLRSIPainter.m */,
+				48D3C30B211859BC004A04D2 /* ZLKDJGridePainter.h */,
+				48D3C30C211859BC004A04D2 /* ZLKDJPainter.h */,
+				48D3C30D211859BC004A04D2 /* ZLRSIGridePainter.h */,
+				48D3C30E211859BC004A04D2 /* ZLRSIPainter.h */,
+			);
+			path = AssistPainter;
+			sourceTree = "<group>";
+		};
+		48D3C30F211859BC004A04D2 /* CandlePainter */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C310211859BC004A04D2 /* ZLCandlePainter.h */,
+				48D3C311211859BC004A04D2 /* LZCandleGridePainter.h */,
+				48D3C312211859BC004A04D2 /* LZCandleGridePainter.m */,
+				48D3C313211859BC004A04D2 /* ZLCandlePainter.m */,
+			);
+			path = CandlePainter;
+			sourceTree = "<group>";
+		};
+		48D3C317211859BC004A04D2 /* GuideTransformer */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C318211859BC004A04D2 /* Transformer */,
+				48D3C323211859BC004A04D2 /* Params */,
+				48D3C32E211859BC004A04D2 /* Model */,
+			);
+			path = GuideTransformer;
+			sourceTree = "<group>";
+		};
+		48D3C318211859BC004A04D2 /* Transformer */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C319211859BC004A04D2 /* ZLMATransformer.m */,
+				48D3C31A211859BC004A04D2 /* ZLKDJTransformer.m */,
+				48D3C31B211859BC004A04D2 /* ZLDataTransformer.h */,
+				48D3C31C211859BC004A04D2 /* ZLRSITransformer.h */,
+				48D3C31D211859BC004A04D2 /* ZLBOLLTransformer.h */,
+				48D3C31E211859BC004A04D2 /* ZLMATransformer.h */,
+				48D3C31F211859BC004A04D2 /* ZLRSITransformer.m */,
+				48D3C320211859BC004A04D2 /* ZLDataTransformer.m */,
+				48D3C321211859BC004A04D2 /* ZLKDJTransformer.h */,
+				48D3C322211859BC004A04D2 /* ZLBOLLTransformer.m */,
+			);
+			path = Transformer;
+			sourceTree = "<group>";
+		};
+		48D3C323211859BC004A04D2 /* Params */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C324211859BC004A04D2 /* ZLMAParam.m */,
+				48D3C325211859BC004A04D2 /* ZLRSIParam.h */,
+				48D3C326211859BC004A04D2 /* ZLBOLLParam.h */,
+				48D3C327211859BC004A04D2 /* ZLKDJParam.m */,
+				48D3C328211859BC004A04D2 /* ZLGuideParam.m */,
+				48D3C329211859BC004A04D2 /* ZLMAParam.h */,
+				48D3C32A211859BC004A04D2 /* ZLKDJParam.h */,
+				48D3C32B211859BC004A04D2 /* ZLBOLLParam.m */,
+				48D3C32C211859BC004A04D2 /* ZLRSIParam.m */,
+				48D3C32D211859BC004A04D2 /* ZLGuideParam.h */,
+			);
+			path = Params;
+			sourceTree = "<group>";
+		};
+		48D3C32E211859BC004A04D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C32F211859BC004A04D2 /* ZLGuideModel.m */,
+				48D3C330211859BC004A04D2 /* ZLGuideDataPack.m */,
+				48D3C331211859BC004A04D2 /* ZLGuideDataType.m */,
+				48D3C332211859BC004A04D2 /* GuideModel */,
+				48D3C33B211859BC004A04D2 /* ZLGuideDataType.h */,
+				48D3C33C211859BC004A04D2 /* ZLGuideDataPack.h */,
+				48D3C33D211859BC004A04D2 /* ZLGuideModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48D3C332211859BC004A04D2 /* GuideModel */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C333211859BC004A04D2 /* ZLGuideMAModel.m */,
+				48D3C334211859BC004A04D2 /* ZLGuideRSIModel.h */,
+				48D3C335211859BC004A04D2 /* ZLGuideKDJModel.m */,
+				48D3C336211859BC004A04D2 /* ZLGuideBOLLModel.m */,
+				48D3C337211859BC004A04D2 /* ZLGuideMAModel.h */,
+				48D3C338211859BC004A04D2 /* ZLGuideKDJModel.h */,
+				48D3C339211859BC004A04D2 /* ZLGuideRSIModel.m */,
+				48D3C33A211859BC004A04D2 /* ZLGuideBOLLModel.h */,
+			);
+			path = GuideModel;
+			sourceTree = "<group>";
+		};
+		48D3C33E211859BC004A04D2 /* MainPainter */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C33F211859BC004A04D2 /* ZLMAPainter.h */,
+				48D3C340211859BC004A04D2 /* ZLBOLLPainter.m */,
+				48D3C341211859BC004A04D2 /* ZLMAPainter.m */,
+				48D3C342211859BC004A04D2 /* ZLBOLLPainter.h */,
+			);
+			path = MainPainter;
+			sourceTree = "<group>";
+		};
+		48D3C345211859BC004A04D2 /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C346211859BC004A04D2 /* ZLQuoteDataCenter.h */,
+				48D3C347211859BC004A04D2 /* ZLGuideManager.m */,
+				48D3C348211859BC004A04D2 /* Server */,
+				48D3C34C211859BC004A04D2 /* ZLQuoteDataCenter.m */,
+				48D3C34D211859BC004A04D2 /* ZLGuideManager.h */,
+			);
+			path = DataCenter;
+			sourceTree = "<group>";
+		};
+		48D3C348211859BC004A04D2 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C349211859BC004A04D2 /* MockServer.m */,
+				48D3C34A211859BC004A04D2 /* MockServer.h */,
+				48D3C34B211859BC004A04D2 /* N225.xml */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		48D3C350211859BC004A04D2 /* PaintView */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C351211859BC004A04D2 /* ZLPaintCore.m */,
+				48D3C352211859BC004A04D2 /* ZLPaintAssistScene.m */,
+				48D3C353211859BC004A04D2 /* ZLBasePaintView.m */,
+				48D3C354211859BC004A04D2 /* ZLPaintMainScene.h */,
+				48D3C355211859BC004A04D2 /* ZLPaintView.m */,
+				48D3C356211859BC004A04D2 /* ZLPaintCore.h */,
+				48D3C357211859BC004A04D2 /* ZLPaintAssistScene.h */,
+				48D3C358211859BC004A04D2 /* ZLBasePaintView.h */,
+				48D3C359211859BC004A04D2 /* ZLPaintView.h */,
+				48D3C35A211859BC004A04D2 /* ZLPaintMainScene.m */,
+			);
+			path = PaintView;
+			sourceTree = "<group>";
+		};
+		48D3C35B211859BC004A04D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C35C211859BC004A04D2 /* KLineModel.m */,
+				48D3C35D211859BC004A04D2 /* KLineModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7071B7D736516A97C06C35AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8259BE719CBDAB0E3F1DE8E8 /* libPods-ZLKLineDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF3A4C6CEDB1DF186B0CD445 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21D613B7FFE29201A2E18D7D /* Pods-ZLKLineDemo.debug.xcconfig */,
+				FEE2F91DB0A2A8E8C11F7550 /* Pods-ZLKLineDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48D3C04D21184CE9004A04D2 /* ZLKLineDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48D3C06421184CEE004A04D2 /* Build configuration list for PBXNativeTarget "ZLKLineDemo" */;
+			buildPhases = (
+				F9FC727AAE47679C33C512A1 /* [CP] Check Pods Manifest.lock */,
+				48D3C04A21184CE9004A04D2 /* Sources */,
+				48D3C04B21184CE9004A04D2 /* Frameworks */,
+				48D3C04C21184CE9004A04D2 /* Resources */,
+				47FF97A1AACA8573667B1957 /* [CP] Embed Pods Frameworks */,
+				A42F84F71CBFCC1578F6B0A2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZLKLineDemo;
+			productName = ZLKLineDemo;
+			productReference = 48D3C04E21184CE9004A04D2 /* ZLKLineDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48D3C04621184CE9004A04D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Zhanglei;
+				TargetAttributes = {
+					48D3C04D21184CE9004A04D2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 48D3C04921184CE9004A04D2 /* Build configuration list for PBXProject "ZLKLineDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48D3C04521184CE9004A04D2;
+			productRefGroup = 48D3C04F21184CE9004A04D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48D3C04D21184CE9004A04D2 /* ZLKLineDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48D3C04C21184CE9004A04D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D3C1BD2118556E004A04D2 /* Info.plist in Resources */,
+				48D3C1BA2118556E004A04D2 /* Main.storyboard in Resources */,
+				48D3C37B211859BC004A04D2 /* N225.xml in Resources */,
+				48D3C1B82118556E004A04D2 /* Assets.xcassets in Resources */,
+				48D3C1B92118556E004A04D2 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47FF97A1AACA8573667B1957 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZLKLineDemo/Pods-ZLKLineDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A42F84F71CBFCC1578F6B0A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZLKLineDemo/Pods-ZLKLineDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9FC727AAE47679C33C512A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48D3C04A21184CE9004A04D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D3C363211859BC004A04D2 /* ZLCandlePainter.m in Sources */,
+				48D3C374211859BC004A04D2 /* ZLGuideKDJModel.m in Sources */,
+				48D3C369211859BC004A04D2 /* ZLDataTransformer.m in Sources */,
+				48D3C361211859BC004A04D2 /* ZLRSIPainter.m in Sources */,
+				48D3C301211857BD004A04D2 /* UIView+QuickNew.m in Sources */,
+				48D3C360211859BC004A04D2 /* ZLRSIGridePainter.m in Sources */,
+				48D3C2A6211857BD004A04D2 /* ViewController.m in Sources */,
+				48D3C2FF211857BD004A04D2 /* CALayer+ZLEX.m in Sources */,
+				48D3C372211859BC004A04D2 /* ZLGuideDataType.m in Sources */,
+				48D3C2F6211857BD004A04D2 /* NSMutableArray+Safe.m in Sources */,
+				48D3C379211859BC004A04D2 /* ZLGuideManager.m in Sources */,
+				48D3C302211857BD004A04D2 /* UIButton+ZLEX.m in Sources */,
+				48D3C2F8211857BD004A04D2 /* NSMutableSet+Safe.m in Sources */,
+				48D3C1BB2118556E004A04D2 /* main.m in Sources */,
+				48D3C378211859BC004A04D2 /* ZLMAPainter.m in Sources */,
+				48D3C2FD211857BD004A04D2 /* ScreenAuotoSizeScale.m in Sources */,
+				48D3C2F7211857BD004A04D2 /* NSMutableDictionary+Safe.m in Sources */,
+				48D3C2A7211857BD004A04D2 /* ZLViewController.m in Sources */,
+				48D3C381211859BC004A04D2 /* ZLPaintView.m in Sources */,
+				48D3C36C211859BC004A04D2 /* ZLKDJParam.m in Sources */,
+				48D3C367211859BC004A04D2 /* ZLKDJTransformer.m in Sources */,
+				48D3C380211859BC004A04D2 /* ZLBasePaintView.m in Sources */,
+				48D3C2A8211857BD004A04D2 /* MainViewCell.m in Sources */,
+				48D3C300211857BD004A04D2 /* UIImage+ZLEX.m in Sources */,
+				48D3C35E211859BC004A04D2 /* ZLKDJGridePainter.m in Sources */,
+				48D3C36A211859BC004A04D2 /* ZLBOLLTransformer.m in Sources */,
+				48D3C36F211859BC004A04D2 /* ZLRSIParam.m in Sources */,
+				48D3C375211859BC004A04D2 /* ZLGuideBOLLModel.m in Sources */,
+				48D3C2FB211857BD004A04D2 /* UIView+ZLEX.m in Sources */,
+				48D3C2FE211857BD004A04D2 /* NSString+ZLEX.m in Sources */,
+				48D3C2FA211857BD004A04D2 /* NSArray+Safe.m in Sources */,
+				48D3C37C211859BC004A04D2 /* ZLQuoteDataCenter.m in Sources */,
+				48D3C2F5211857BD004A04D2 /* NSObject+Safe.m in Sources */,
+				48D3C37D211859BC004A04D2 /* KLineDemoController.m in Sources */,
+				48D3C382211859BC004A04D2 /* ZLPaintMainScene.m in Sources */,
+				48D3C37F211859BC004A04D2 /* ZLPaintAssistScene.m in Sources */,
+				48D3C371211859BC004A04D2 /* ZLGuideDataPack.m in Sources */,
+				48D3C364211859BC004A04D2 /* ZLGridePainter.m in Sources */,
+				48D3C377211859BC004A04D2 /* ZLBOLLPainter.m in Sources */,
+				48D3C37A211859BC004A04D2 /* MockServer.m in Sources */,
+				48D3C35F211859BC004A04D2 /* ZLKDJPainter.m in Sources */,
+				48D3C36D211859BC004A04D2 /* ZLGuideParam.m in Sources */,
+				48D3C36B211859BC004A04D2 /* ZLMAParam.m in Sources */,
+				48D3C370211859BC004A04D2 /* ZLGuideModel.m in Sources */,
+				48D3C2F9211857BD004A04D2 /* NSDictionary+Safe.m in Sources */,
+				48D3C376211859BC004A04D2 /* ZLGuideRSIModel.m in Sources */,
+				48D3C2FC211857BD004A04D2 /* NSObject+ZLEX.m in Sources */,
+				48D3C37E211859BC004A04D2 /* ZLPaintCore.m in Sources */,
+				48D3C383211859BC004A04D2 /* KLineModel.m in Sources */,
+				48D3C36E211859BC004A04D2 /* ZLBOLLParam.m in Sources */,
+				48D3C303211857BD004A04D2 /* GLLoadTool.m in Sources */,
+				48D3C373211859BC004A04D2 /* ZLGuideMAModel.m in Sources */,
+				48D3C1BC2118556E004A04D2 /* AppDelegate.m in Sources */,
+				48D3C365211859BC004A04D2 /* ZLBasePainter.m in Sources */,
+				48D3C362211859BC004A04D2 /* LZCandleGridePainter.m in Sources */,
+				48D3C366211859BC004A04D2 /* ZLMATransformer.m in Sources */,
+				48D3C368211859BC004A04D2 /* ZLRSITransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		48D3C1522118556E004A04D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48D3C1532118556E004A04D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		48D3C1542118556E004A04D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48D3C1552118556E004A04D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48D3C06221184CEE004A04D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48D3C06321184CEE004A04D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48D3C06521184CEE004A04D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21D613B7FFE29201A2E18D7D /* Pods-ZLKLineDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AK4N3GQYUV;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZLKLineDemo/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/ZLKLineDemo/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LayZhang.ZLKLineDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		48D3C06621184CEE004A04D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE2F91DB0A2A8E8C11F7550 /* Pods-ZLKLineDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AK4N3GQYUV;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZLKLineDemo/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/ZLKLineDemo/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LayZhang.ZLKLineDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48D3C04921184CE9004A04D2 /* Build configuration list for PBXProject "ZLKLineDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D3C06221184CEE004A04D2 /* Debug */,
+				48D3C06321184CEE004A04D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48D3C06421184CEE004A04D2 /* Build configuration list for PBXNativeTarget "ZLKLineDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D3C06521184CEE004A04D2 /* Debug */,
+				48D3C06621184CEE004A04D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48D3C04621184CE9004A04D2 /* Project object */;
+}
