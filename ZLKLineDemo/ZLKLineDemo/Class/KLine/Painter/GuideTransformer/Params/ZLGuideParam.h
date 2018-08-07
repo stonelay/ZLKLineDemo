@@ -12,8 +12,10 @@
 
 @interface ZLGuideParam : NSObject
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *guideID;
 
-//- (UIColor *)colorWithDataName:(ZLGuideDataName)dataName;
+- (void)initDefault;
+
++ (ZLGuideParam *)getDefaultParamByGuideID:(NSString *)guideID;
 
 @end

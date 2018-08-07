@@ -10,8 +10,20 @@
 
 @implementation ZLGuideParam
 
-//- (UIColor *)colorWithDataName:(ZLGuideDataName)dataName {
-//    return ZLClearColor;
-//}
+- (instancetype)init {
+    if (self = [super init]) {
+        [self initDefault];
+    }
+    return self;
+}
+
+- (void)initDefault {}
+
++ (ZLGuideParam *)getDefaultParamByGuideID:(NSString *)guideID {
+    NSString *className = [NSString stringWithFormat:@"ZL%@Param", guideID];
+    Class guideParamClass = NSClassFromString(className);
+    NSAssert(guideParamClass, @"Invalid guideParam Class.");
+    return [[guideParamClass alloc] init];
+}
 
 @end

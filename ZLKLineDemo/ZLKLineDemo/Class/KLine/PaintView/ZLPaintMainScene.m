@@ -112,11 +112,11 @@
 }
 
 - (ZLGuideDataPack *)painter:(ZLBasePainter *)painter dataPackByMA:(NSString *)ma {
-    return [self.paintCore getMADataPackByKey:ma];
+    return [self.paintCore getDataPackByGuideKey:kGUIDE_ID_MA dataKey:ma];
 }
 
 - (ZLGuideDataPack *)bollDataPackInPainter:(ZLBasePainter *)painter {
-    return [self.paintCore getBOLLDataPack];
+    return [self.paintCore getDataPackByGuideKey:kGUIDE_ID_BOLL];
 }
 
 #pragma mark - main paitview delegate
@@ -194,8 +194,8 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     
-    [self.gridePainter performSelector:methodName withObject:data];
     [self.candlePainter performSelector:methodName withObject:data];
+    [self.gridePainter performSelector:methodName withObject:data];
     
     // main
     if (self.paintCore.paintMainType & GuidePaintMainTypeMA) {

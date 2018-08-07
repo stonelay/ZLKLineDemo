@@ -91,9 +91,7 @@ static CGFloat inline getAssistInforHeight(GuidePaintAssistType assistType){
 - (void)prepareDrawWithPoint:(CGPoint)point andScale:(CGFloat)scale;
 
 #pragma mark - property
-- (ZLGuideDataPack *)getMADataPackByKey:(NSString *)key;
-- (ZLGuideDataPack *)getBOLLDataPack;
-- (ZLGuideDataPack *)getKDJDataPack;
-- (ZLGuideDataPack *)getRSIDataPack;
+- (ZLGuideDataPack *)getDataPackByGuideKey:(NSString *)guideKey;
+- (ZLGuideDataPack *)getDataPackByGuideKey:(NSString *)guideKey dataKey:(NSString *)dataKey;
 
 @end

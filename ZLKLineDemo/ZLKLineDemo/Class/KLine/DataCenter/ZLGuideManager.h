@@ -10,27 +10,13 @@
 
 #import "ZLGuideDataPack.h"
 
-@interface SMaximum : NSObject
-
-+ (instancetype)initWithMax:(CGFloat)max min:(CGFloat)min;
-
-@property (nonatomic, assign) CGFloat max;
-@property (nonatomic, assign) CGFloat min;
-
-@end
-
 @interface ZLGuideManager : NSObject
 
 - (void)updateWithChartData:(NSArray *)chartData;
 
-- (ZLGuideDataPack *)getMADataPackByKey:(NSString *)dataKey;
-- (ZLGuideDataPack *)getBOLLDataPack;
-- (ZLGuideDataPack *)getKDJDataPack;
-- (ZLGuideDataPack *)getRSIDataPack;
+- (ZLGuideDataPack *)getDataPackByGuideKey:(NSString *)guideKey;
+- (ZLGuideDataPack *)getDataPackByGuideKey:(NSString *)guideKey dataKey:(NSString *)dataKey;
 
-- (SMaximum *)getMAMaximunWithRange:(NSRange)range;
-- (SMaximum *)getBOLLMaximunWithRange:(NSRange)range;
-- (SMaximum *)getKDJMaximunWithRange:(NSRange)range;
-- (SMaximum *)getRSIMaximunWithRange:(NSRange)range;
+- (SMaximum *)getMaximumByGuideKey:(NSString *)guideKey range:(NSRange)range;
 
 @end

@@ -22,9 +22,13 @@ typedef NS_ENUM(int, ZLMADataType) {
 
 @interface ZLMAParam : ZLGuideParam
 
+@property (nonatomic, strong) NSString *dataKey;
+
 @property (nonatomic, assign) ZLMADataType maDataType;
 @property (nonatomic, assign) CGFloat period; // MA的周期
 
 @property (nonatomic, strong) UIColor *maColor;
+
++ (ZLMAParam *)initWithMADataKey:(NSString *)dataKey;
 
 @end

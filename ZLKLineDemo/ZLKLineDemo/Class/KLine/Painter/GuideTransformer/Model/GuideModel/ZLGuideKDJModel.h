@@ -14,7 +14,4 @@
 @property (nonatomic, assign) CGFloat dData;
 @property (nonatomic, assign) CGFloat jData;
 
-@property (nonatomic, assign, readonly) CGFloat maxData;
-@property (nonatomic, assign, readonly) CGFloat minData;
-
 @end

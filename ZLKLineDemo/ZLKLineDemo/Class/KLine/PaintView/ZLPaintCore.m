@@ -131,43 +131,35 @@
     }
     
     if (self.paintMainType & GuidePaintMainTypeMA) {
-        SMaximum *maximum = [self.guideManager getMAMaximunWithRange:NSMakeRange(self.curIndex, self.showCount)];
+        SMaximum *maximum = [self.guideManager getMaximumByGuideKey:kGUIDE_ID_MA range:NSMakeRange(self.curIndex, self.showCount)];
         self.sHigherPrice = MAX(maximum.max, self.sHigherPrice);
         self.sLowerPrice = MIN(maximum.min, self.sLowerPrice);
     }
     
     if (self.paintMainType & GuidePaintMainTypeBOLL) {
-        SMaximum *maximum = [self.guideManager getBOLLMaximunWithRange:NSMakeRange(self.curIndex, self.showCount)];
+        SMaximum *maximum = [self.guideManager getMaximumByGuideKey:kGUIDE_ID_BOLL range:NSMakeRange(self.curIndex, self.showCount)];
         self.sHigherPrice = MAX(maximum.max, self.sHigherPrice);
         self.sLowerPrice = MIN(maximum.min, self.sLowerPrice);
     }
     
+    // 预留屏幕上下空隙
     self.sLowerPrice *= kLScale;
     self.sHigherPrice *= kHScale;
-    // 计算每个点代表的值是多少
-//    self.unitValue = (self.sHigherPrice - self.sLowerPrice) / [self z_portHeight];
 }
 
 // 计算辅助技术指标的最高和最低
 - (void)fixAMaximum {
-    // 预留屏幕上下空隙
-    
-    self.aLowerValue = INT32_MAX;
-    self.aHigherValue = 0;
-    
-//    for (KLineModel *model in self.curShowArray) {
-//        self.aHigherValue = MAX(model.high, self.aHigherValue);
-//        self.aLowerValue = MIN(model.low, self.aLowerValue);
-//    }
+    self.aLowerValue = 0; //INT32_MAX;
+    self.aHigherValue = 80; //0;
     
     if (self.paintAssistType & GuidePaintAssistTypeKDJ) {
-        SMaximum *maximum = [self.guideManager getKDJMaximunWithRange:NSMakeRange(self.curIndex, self.showCount)];
+        SMaximum *maximum = [self.guideManager getMaximumByGuideKey:kGUIDE_ID_KDJ range:NSMakeRange(self.curIndex, self.showCount)];
         self.aHigherValue = MAX(maximum.max, self.aHigherValue);
         self.aLowerValue = MIN(maximum.min, self.aLowerValue);
     }
     
     if (self.paintAssistType & GuidePaintAssistTypeRSI) {
-        SMaximum *maximum = [self.guideManager getRSIMaximunWithRange:NSMakeRange(self.curIndex, self.showCount)];
+        SMaximum *maximum = [self.guideManager getMaximumByGuideKey:kGUIDE_ID_RSI range:NSMakeRange(self.curIndex, self.showCount)];
         self.aHigherValue = MAX(maximum.max, self.aHigherValue);
         self.aLowerValue = MIN(maximum.min, self.aLowerValue);
     }
@@ -225,54 +217,18 @@
     [self.guideManager updateWithChartData:drawDataArray];
 }
 
-- (ZLGuideDataPack *)getMADataPackByKey:(NSString *)key {
-    ZLGuideDataPack *oDataPack = [self.guideManager getMADataPackByKey:key];
-    if (!oDataPack) {
-        return nil;
+- (ZLGuideDataPack *)getDataPackByGuideKey:(NSString *)guideKey {
+    if ([guideKey isEqualToString:kGUIDE_ID_MA]) {
+        return [self getDataPackByGuideKey:guideKey dataKey:PKey_MADataID_MA1];
     }
-
-    ZLMAParam *param = (ZLMAParam *)oDataPack.param;
-    ZLGuideDataPack *tDataPack = [[ZLGuideDataPack alloc] initWithParams:param];
-
-    tDataPack.dataArray = [oDataPack.dataArray subarrayWithRange:NSMakeRange(self.curIndex, self.showCount)];
-    return tDataPack;
+    return [self getDataPackByGuideKey:guideKey dataKey:nil];
 }
 
-- (ZLGuideDataPack *)getBOLLDataPack {
-    ZLGuideDataPack *oDataPack = [self.guideManager getBOLLDataPack];
-    if (!oDataPack) {
-        return nil;
-    }
+- (ZLGuideDataPack *)getDataPackByGuideKey:(NSString *)guideKey dataKey:(NSString *)dataKey {
+    ZLGuideDataPack *oDataPack = [self.guideManager getDataPackByGuideKey:guideKey dataKey:dataKey];
+    if (!oDataPack) return nil;
     
-    ZLBOLLParam *param = (ZLBOLLParam *)oDataPack.param;
-    ZLGuideDataPack *tDataPack = [[ZLGuideDataPack alloc] initWithParams:param];
-    
-    tDataPack.dataArray = [oDataPack.dataArray subarrayWithRange:NSMakeRange(self.curIndex, self.showCount)];
-    return tDataPack;
-}
-
-- (ZLGuideDataPack *)getKDJDataPack {
-    ZLGuideDataPack *oDataPack = [self.guideManager getKDJDataPack];
-    if (!oDataPack) {
-        return nil;
-    }
-    
-    ZLKDJParam *param = (ZLKDJParam *)oDataPack.param;
-    ZLGuideDataPack *tDataPack = [[ZLGuideDataPack alloc] initWithParams:param];
-    
-    tDataPack.dataArray = [oDataPack.dataArray subarrayWithRange:NSMakeRange(self.curIndex, self.showCount)];
-    return tDataPack;
-}
-
-- (ZLGuideDataPack *)getRSIDataPack {
-    ZLGuideDataPack *oDataPack = [self.guideManager getRSIDataPack];
-    if (!oDataPack) {
-        return nil;
-    }
-    
-    ZLRSIParam *param = (ZLRSIParam *)oDataPack.param;
-    ZLGuideDataPack *tDataPack = [[ZLGuideDataPack alloc] initWithParams:param];
-    
+    ZLGuideDataPack *tDataPack = [[ZLGuideDataPack alloc] initWithParams:oDataPack.param];
     tDataPack.dataArray = [oDataPack.dataArray subarrayWithRange:NSMakeRange(self.curIndex, self.showCount)];
     return tDataPack;
 }

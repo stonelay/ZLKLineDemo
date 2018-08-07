@@ -400,16 +400,16 @@
 		48D3C318211859BC004A04D2 /* Transformer */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C319211859BC004A04D2 /* ZLMATransformer.m */,
-				48D3C31A211859BC004A04D2 /* ZLKDJTransformer.m */,
-				48D3C31B211859BC004A04D2 /* ZLDataTransformer.h */,
-				48D3C31C211859BC004A04D2 /* ZLRSITransformer.h */,
 				48D3C31D211859BC004A04D2 /* ZLBOLLTransformer.h */,
-				48D3C31E211859BC004A04D2 /* ZLMATransformer.h */,
-				48D3C31F211859BC004A04D2 /* ZLRSITransformer.m */,
+				48D3C322211859BC004A04D2 /* ZLBOLLTransformer.m */,
+				48D3C31B211859BC004A04D2 /* ZLDataTransformer.h */,
 				48D3C320211859BC004A04D2 /* ZLDataTransformer.m */,
 				48D3C321211859BC004A04D2 /* ZLKDJTransformer.h */,
-				48D3C322211859BC004A04D2 /* ZLBOLLTransformer.m */,
+				48D3C31A211859BC004A04D2 /* ZLKDJTransformer.m */,
+				48D3C31E211859BC004A04D2 /* ZLMATransformer.h */,
+				48D3C319211859BC004A04D2 /* ZLMATransformer.m */,
+				48D3C31C211859BC004A04D2 /* ZLRSITransformer.h */,
+				48D3C31F211859BC004A04D2 /* ZLRSITransformer.m */,
 			);
 			path = Transformer;
 			sourceTree = "<group>";
@@ -417,16 +417,16 @@
 		48D3C323211859BC004A04D2 /* Params */ = {
 			isa = PBXGroup;
 			children = (
+				48D3C326211859BC004A04D2 /* ZLBOLLParam.h */,
+				48D3C32B211859BC004A04D2 /* ZLBOLLParam.m */,
+				48D3C32D211859BC004A04D2 /* ZLGuideParam.h */,
+				48D3C328211859BC004A04D2 /* ZLGuideParam.m */,
+				48D3C32A211859BC004A04D2 /* ZLKDJParam.h */,
+				48D3C327211859BC004A04D2 /* ZLKDJParam.m */,
+				48D3C329211859BC004A04D2 /* ZLMAParam.h */,
 				48D3C324211859BC004A04D2 /* ZLMAParam.m */,
 				48D3C325211859BC004A04D2 /* ZLRSIParam.h */,
-				48D3C326211859BC004A04D2 /* ZLBOLLParam.h */,
-				48D3C327211859BC004A04D2 /* ZLKDJParam.m */,
-				48D3C328211859BC004A04D2 /* ZLGuideParam.m */,
-				48D3C329211859BC004A04D2 /* ZLMAParam.h */,
-				48D3C32A211859BC004A04D2 /* ZLKDJParam.h */,
-				48D3C32B211859BC004A04D2 /* ZLBOLLParam.m */,
 				48D3C32C211859BC004A04D2 /* ZLRSIParam.m */,
-				48D3C32D211859BC004A04D2 /* ZLGuideParam.h */,
 			);
 			path = Params;
 			sourceTree = "<group>";
@@ -463,10 +463,10 @@
 		48D3C33E211859BC004A04D2 /* MainPainter */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C33F211859BC004A04D2 /* ZLMAPainter.h */,
-				48D3C340211859BC004A04D2 /* ZLBOLLPainter.m */,
-				48D3C341211859BC004A04D2 /* ZLMAPainter.m */,
 				48D3C342211859BC004A04D2 /* ZLBOLLPainter.h */,
+				48D3C340211859BC004A04D2 /* ZLBOLLPainter.m */,
+				48D3C33F211859BC004A04D2 /* ZLMAPainter.h */,
+				48D3C341211859BC004A04D2 /* ZLMAPainter.m */,
 			);
 			path = MainPainter;
 			sourceTree = "<group>";
@@ -474,11 +474,11 @@
 		48D3C345211859BC004A04D2 /* DataCenter */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C346211859BC004A04D2 /* ZLQuoteDataCenter.h */,
-				48D3C347211859BC004A04D2 /* ZLGuideManager.m */,
 				48D3C348211859BC004A04D2 /* Server */,
-				48D3C34C211859BC004A04D2 /* ZLQuoteDataCenter.m */,
 				48D3C34D211859BC004A04D2 /* ZLGuideManager.h */,
+				48D3C347211859BC004A04D2 /* ZLGuideManager.m */,
+				48D3C346211859BC004A04D2 /* ZLQuoteDataCenter.h */,
+				48D3C34C211859BC004A04D2 /* ZLQuoteDataCenter.m */,
 			);
 			path = DataCenter;
 			sourceTree = "<group>";

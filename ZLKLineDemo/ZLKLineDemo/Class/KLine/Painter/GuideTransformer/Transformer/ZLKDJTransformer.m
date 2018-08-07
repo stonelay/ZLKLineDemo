@@ -15,8 +15,9 @@
 
 @implementation ZLKDJTransformer
 
-- (NSString *)guideID {
-    return kGUIDE_ID_KDJ;
+- (void)initDefault {
+    [super initDefault];
+    self.transfirmerName = kGUIDE_ID_KDJ;
 }
 
 - (ZLGuideDataPack *)transToGuideData:(NSArray *)chartDataArray guideParam:(ZLGuideParam *)guideParam {

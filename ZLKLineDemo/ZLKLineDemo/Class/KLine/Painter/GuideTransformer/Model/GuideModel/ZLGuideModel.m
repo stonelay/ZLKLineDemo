@@ -25,4 +25,12 @@
     self.isNeedDraw = YES;
 }
 
+- (CGFloat)minData {
+    return 0;
+}
+
+- (CGFloat)maxData {
+    return 0;
+}
+
 @end

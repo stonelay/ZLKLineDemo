@@ -18,9 +18,9 @@ NSString * const MA_Type_WMA  = @"WMA"; // 指数平滑移动平均线
 
 @implementation ZLMATransformer
 
-#pragma mark - override
-- (NSString *)guideID {
-    return kGUIDE_ID_MA;
+- (void)initDefault {
+    [super initDefault];
+    self.transfirmerName = kGUIDE_ID_MA;
 }
 
 - (ZLGuideDataPack *)transToGuideData:(NSArray *)chartDataArray guideParam:(ZLGuideParam *)guideParam {

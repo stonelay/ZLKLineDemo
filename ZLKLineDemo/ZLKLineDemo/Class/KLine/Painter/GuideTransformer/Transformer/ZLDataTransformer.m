@@ -10,13 +10,25 @@
 
 @implementation ZLDataTransformer
 
-- (NSString *)guideID {
-    return @"";
+- (instancetype)init {
+    if (self = [super init]) {
+        [self initDefault];
+    }
+    return self;
 }
+
+- (void)initDefault {}
 
 - (ZLGuideDataPack *)transToGuideData:(NSArray *)chartDataArray
                            guideParam:(ZLGuideParam *)guideParam {
     return nil;
+}
+
++ (ZLDataTransformer *)getTransformerWithGuideID:(NSString *)guideID {
+    NSString *className = [NSString stringWithFormat:@"ZL%@Transformer", guideID];
+    Class transformerClass = NSClassFromString(className);
+    NSAssert(transformerClass, @"Invalid transformerClass.");
+    return [[transformerClass alloc] init];
 }
 
 @end

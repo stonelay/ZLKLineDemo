@@ -15,4 +15,12 @@
     self.name = kGUIDE_ID_MA;
 }
 
+- (CGFloat)minData {
+    return self.data;
+}
+
+- (CGFloat)maxData {
+    return self.data;
+}
+
 @end

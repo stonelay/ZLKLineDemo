@@ -10,7 +10,18 @@
 
 #import "ZLGuideParam.h"
 
-//#import "ZLMAParam.h"
+@interface SMaximum : NSObject
+
++ (instancetype)maximunDefault;
++ (instancetype)initWithMax:(CGFloat)max min:(CGFloat)min;
+
+@property (nonatomic, assign) CGFloat max;
+@property (nonatomic, assign) CGFloat min;
+
+// 取最高和最低
+- (SMaximum *)fixMaximum:(SMaximum *)maximum;
+
+@end
 
 @interface ZLGuideDataPack : NSObject
 
@@ -18,5 +29,8 @@
 
 @property (nonatomic, strong) ZLGuideParam *param;
 @property (nonatomic, strong) NSArray *dataArray;
+
+- (SMaximum *)getMaximumByRange:(NSRange)range;
+
 
 @end

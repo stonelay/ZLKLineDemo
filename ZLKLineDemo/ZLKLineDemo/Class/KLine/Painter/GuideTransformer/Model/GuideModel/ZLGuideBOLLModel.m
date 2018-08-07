@@ -15,4 +15,12 @@
     self.name = kGUIDE_ID_BOLL;
 }
 
+- (CGFloat)minData {
+    return self.lowData;
+}
+
+- (CGFloat)maxData {
+    return self.upData;
+}
+
 @end

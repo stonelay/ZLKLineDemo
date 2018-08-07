@@ -15,8 +15,9 @@
 
 @implementation ZLRSITransformer
 
-- (NSString *)guideID {
-    return kGUIDE_ID_RSI;
+- (void)initDefault {
+    [super initDefault];
+    self.transfirmerName = kGUIDE_ID_RSI;
 }
 
 - (ZLGuideDataPack *)transToGuideData:(NSArray *)chartDataArray guideParam:(ZLGuideParam *)guideParam {

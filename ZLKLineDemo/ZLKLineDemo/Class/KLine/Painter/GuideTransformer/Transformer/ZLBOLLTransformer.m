@@ -14,8 +14,9 @@
 
 @implementation ZLBOLLTransformer
 
-- (NSString *)guideID {
-    return kGUIDE_ID_BOLL;
+- (void)initDefault {
+    [super initDefault];
+    self.transfirmerName = kGUIDE_ID_BOLL;
 }
 
 - (ZLGuideDataPack *)transToGuideData:(NSArray *)chartDataArray guideParam:(ZLGuideParam *)guideParam {

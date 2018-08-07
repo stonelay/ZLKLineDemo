@@ -11,13 +11,15 @@
 #import "ZLGuideDataPack.h"
 #import "ZLGuideParam.h"
 
-
 @interface ZLDataTransformer : NSObject
 
-- (NSString *)guideID;
+@property (nonatomic, strong) NSString *transfirmerName;
 
+- (void)initDefault;
 - (ZLGuideDataPack *)transToGuideData:(NSArray *)chartDataArray
                            guideParam:(ZLGuideParam *)guideParam;
+
++ (ZLDataTransformer *)getTransformerWithGuideID:(NSString *)guideID;
 
 
 @end

@@ -12,6 +12,10 @@
 @interface ZLGuideModel : NSObject
 
 @property (nonatomic, strong) NSString *name;
+
+@property (nonatomic, assign, readonly) CGFloat maxData;
+@property (nonatomic, assign, readonly) CGFloat minData;
+
 @property (nonatomic, assign) BOOL      isNeedDraw;
 
 - (void)initDefault;

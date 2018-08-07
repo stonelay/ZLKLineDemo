@@ -115,11 +115,11 @@
 }
 
 - (ZLGuideDataPack *)kdjDataPackInPainter:(ZLBasePainter *)painter {
-    return [self.paintCore getKDJDataPack];
+    return [self.paintCore getDataPackByGuideKey:kGUIDE_ID_KDJ];
 }
 
 - (ZLGuideDataPack *)rsiDataPackInPainter:(ZLBasePainter *)painter {
-    return [self.paintCore getRSIDataPack];
+    return [self.paintCore getDataPackByGuideKey:kGUIDE_ID_RSI];
 }
 
 #pragma mark - assist paitview delegate
@@ -198,19 +198,19 @@
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     // assist
     if (self.paintCore.paintAssistType & GuidePaintAssistTypeKDJ) {
-        ZLBasePainter *assistPainter = [self.assistPainters objectForKey:[ZLGuideDataType getNameByPaintAssistType:GuidePaintAssistTypeKDJ]];
-        if (assistPainter) { [assistPainter performSelector:methodName withObject:data]; }
-        
         ZLBasePainter *gridePainter = [self.gridePainters objectForKey:[ZLGuideDataType getNameByPaintAssistType:GuidePaintAssistTypeKDJ]];
         if (gridePainter) { [gridePainter performSelector:methodName withObject:data]; }
+        
+        ZLBasePainter *assistPainter = [self.assistPainters objectForKey:[ZLGuideDataType getNameByPaintAssistType:GuidePaintAssistTypeKDJ]];
+        if (assistPainter) { [assistPainter performSelector:methodName withObject:data]; }
     }
     
     if (self.paintCore.paintAssistType & GuidePaintAssistTypeRSI) {
-        ZLBasePainter *assistPainter = [self.assistPainters objectForKey:[ZLGuideDataType getNameByPaintAssistType:GuidePaintAssistTypeRSI]];
-        if (assistPainter) { [assistPainter performSelector:methodName withObject:data]; }
-        
         ZLBasePainter *gridePainter = [self.gridePainters objectForKey:[ZLGuideDataType getNameByPaintAssistType:GuidePaintAssistTypeRSI]];
         if (gridePainter) { [gridePainter performSelector:methodName withObject:data]; }
+        
+        ZLBasePainter *assistPainter = [self.assistPainters objectForKey:[ZLGuideDataType getNameByPaintAssistType:GuidePaintAssistTypeRSI]];
+        if (assistPainter) { [assistPainter performSelector:methodName withObject:data]; }
     }
     
     // TODO add other assist

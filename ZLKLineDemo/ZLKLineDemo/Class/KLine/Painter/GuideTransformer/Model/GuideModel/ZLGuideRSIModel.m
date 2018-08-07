@@ -15,4 +15,12 @@
     self.name = kGUIDE_ID_RSI;
 }
 
+- (CGFloat)maxData {
+    return MAX(self.longData, self.shortData);
+}
+
+- (CGFloat)minData {
+    return MIN(self.longData, self.shortData);
+}
+
 @end
