@@ -24,7 +24,5 @@
 
 + (UIButton *)buttonWithTitle:(NSString *)title frame:(CGRect)frame target:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 
-+ (UIButton *)buttonWithTitle:(NSString *)title target:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
-
 + (UIButton *)buttonWithTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 @end

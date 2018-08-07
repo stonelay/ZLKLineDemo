@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Zhanglei. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ZLGuideModel.h"
 
-@interface ZLGuideKDJModel : NSObject
+@interface ZLGuideKDJModel : ZLGuideModel
 
 @property (nonatomic, assign) CGFloat kData;
 @property (nonatomic, assign) CGFloat dData;

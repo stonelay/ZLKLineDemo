@@ -10,4 +10,9 @@
 
 @implementation ZLGuideBOLLModel
 
+- (void)initDefault {
+    [super initDefault];
+    self.name = kGUIDE_ID_BOLL;
+}
+
 @end

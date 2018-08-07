@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Zhanglei. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ZLGuideModel.h"
 
-@interface ZLGuideRSIModel : NSObject
+@interface ZLGuideRSIModel : ZLGuideModel
 
 @property (nonatomic, assign) CGFloat longPeriod;
 @property (nonatomic, assign) CGFloat shortPeriod;
@@ -16,6 +16,5 @@
 @property (nonatomic, assign) CGFloat longData;
 @property (nonatomic, assign) CGFloat shortData;
 
-@property (nonatomic, assign) BOOL isNeedDraw;
-
 @end
+

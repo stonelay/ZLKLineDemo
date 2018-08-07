@@ -10,4 +10,9 @@
 
 @implementation ZLGuideMAModel
 
+- (void)initDefault {
+    [super initDefault];
+    self.name = kGUIDE_ID_MA;
+}
+
 @end

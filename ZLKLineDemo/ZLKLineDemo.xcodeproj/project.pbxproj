@@ -12,7 +12,6 @@
 		48D3C1BA2118556E004A04D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D3C1542118556E004A04D2 /* Main.storyboard */; };
 		48D3C1BB2118556E004A04D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1562118556E004A04D2 /* main.m */; };
 		48D3C1BC2118556E004A04D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1572118556E004A04D2 /* AppDelegate.m */; };
-		48D3C1BD2118556E004A04D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48D3C1592118556E004A04D2 /* Info.plist */; };
 		48D3C2A6211857BD004A04D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1BF211857BC004A04D2 /* ViewController.m */; };
 		48D3C2A7211857BD004A04D2 /* ZLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1C1211857BC004A04D2 /* ZLViewController.m */; };
 		48D3C2A8211857BD004A04D2 /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C1C3211857BC004A04D2 /* MainViewCell.m */; };
@@ -49,7 +48,6 @@
 		48D3C36D211859BC004A04D2 /* ZLGuideParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C328211859BC004A04D2 /* ZLGuideParam.m */; };
 		48D3C36E211859BC004A04D2 /* ZLBOLLParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C32B211859BC004A04D2 /* ZLBOLLParam.m */; };
 		48D3C36F211859BC004A04D2 /* ZLRSIParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C32C211859BC004A04D2 /* ZLRSIParam.m */; };
-		48D3C370211859BC004A04D2 /* ZLGuideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C32F211859BC004A04D2 /* ZLGuideModel.m */; };
 		48D3C371211859BC004A04D2 /* ZLGuideDataPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C330211859BC004A04D2 /* ZLGuideDataPack.m */; };
 		48D3C372211859BC004A04D2 /* ZLGuideDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C331211859BC004A04D2 /* ZLGuideDataType.m */; };
 		48D3C373211859BC004A04D2 /* ZLGuideMAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C333211859BC004A04D2 /* ZLGuideMAModel.m */; };
@@ -69,6 +67,7 @@
 		48D3C381211859BC004A04D2 /* ZLPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C355211859BC004A04D2 /* ZLPaintView.m */; };
 		48D3C382211859BC004A04D2 /* ZLPaintMainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C35A211859BC004A04D2 /* ZLPaintMainScene.m */; };
 		48D3C383211859BC004A04D2 /* KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C35C211859BC004A04D2 /* KLineModel.m */; };
+		48D3C3862119349C004A04D2 /* ZLGuideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C3852119349B004A04D2 /* ZLGuideModel.m */; };
 		C5E420434A830FBAEAD75B17 /* libPods-ZLKLineDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8259BE719CBDAB0E3F1DE8E8 /* libPods-ZLKLineDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -160,7 +159,6 @@
 		48D3C32B211859BC004A04D2 /* ZLBOLLParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBOLLParam.m; sourceTree = "<group>"; };
 		48D3C32C211859BC004A04D2 /* ZLRSIParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLRSIParam.m; sourceTree = "<group>"; };
 		48D3C32D211859BC004A04D2 /* ZLGuideParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideParam.h; sourceTree = "<group>"; };
-		48D3C32F211859BC004A04D2 /* ZLGuideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideModel.m; sourceTree = "<group>"; };
 		48D3C330211859BC004A04D2 /* ZLGuideDataPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideDataPack.m; sourceTree = "<group>"; };
 		48D3C331211859BC004A04D2 /* ZLGuideDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideDataType.m; sourceTree = "<group>"; };
 		48D3C333211859BC004A04D2 /* ZLGuideMAModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideMAModel.m; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 		48D3C33A211859BC004A04D2 /* ZLGuideBOLLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideBOLLModel.h; sourceTree = "<group>"; };
 		48D3C33B211859BC004A04D2 /* ZLGuideDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideDataType.h; sourceTree = "<group>"; };
 		48D3C33C211859BC004A04D2 /* ZLGuideDataPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideDataPack.h; sourceTree = "<group>"; };
-		48D3C33D211859BC004A04D2 /* ZLGuideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideModel.h; sourceTree = "<group>"; };
 		48D3C33F211859BC004A04D2 /* ZLMAPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLMAPainter.h; sourceTree = "<group>"; };
 		48D3C340211859BC004A04D2 /* ZLBOLLPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBOLLPainter.m; sourceTree = "<group>"; };
 		48D3C341211859BC004A04D2 /* ZLMAPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLMAPainter.m; sourceTree = "<group>"; };
@@ -201,6 +198,8 @@
 		48D3C35A211859BC004A04D2 /* ZLPaintMainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPaintMainScene.m; sourceTree = "<group>"; };
 		48D3C35C211859BC004A04D2 /* KLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineModel.m; sourceTree = "<group>"; };
 		48D3C35D211859BC004A04D2 /* KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineModel.h; sourceTree = "<group>"; };
+		48D3C3842119349B004A04D2 /* ZLGuideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideModel.h; sourceTree = "<group>"; };
+		48D3C3852119349B004A04D2 /* ZLGuideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideModel.m; sourceTree = "<group>"; };
 		8259BE719CBDAB0E3F1DE8E8 /* libPods-ZLKLineDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZLKLineDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE2F91DB0A2A8E8C11F7550 /* Pods-ZLKLineDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLKLineDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLKLineDemo/Pods-ZLKLineDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -351,13 +350,13 @@
 			children = (
 				48D3C306211859BC004A04D2 /* AssistPainter */,
 				48D3C30F211859BC004A04D2 /* CandlePainter */,
-				48D3C314211859BC004A04D2 /* ZLGridePainter.m */,
-				48D3C315211859BC004A04D2 /* ZLKLinePainter.h */,
-				48D3C316211859BC004A04D2 /* ZLBasePainter.m */,
 				48D3C317211859BC004A04D2 /* GuideTransformer */,
 				48D3C33E211859BC004A04D2 /* MainPainter */,
 				48D3C343211859BC004A04D2 /* ZLBasePainter.h */,
+				48D3C316211859BC004A04D2 /* ZLBasePainter.m */,
 				48D3C344211859BC004A04D2 /* ZLGridePainter.h */,
+				48D3C314211859BC004A04D2 /* ZLGridePainter.m */,
+				48D3C315211859BC004A04D2 /* ZLKLinePainter.h */,
 			);
 			path = Painter;
 			sourceTree = "<group>";
@@ -365,14 +364,14 @@
 		48D3C306211859BC004A04D2 /* AssistPainter */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C307211859BC004A04D2 /* ZLKDJGridePainter.m */,
-				48D3C308211859BC004A04D2 /* ZLKDJPainter.m */,
-				48D3C309211859BC004A04D2 /* ZLRSIGridePainter.m */,
-				48D3C30A211859BC004A04D2 /* ZLRSIPainter.m */,
 				48D3C30B211859BC004A04D2 /* ZLKDJGridePainter.h */,
+				48D3C307211859BC004A04D2 /* ZLKDJGridePainter.m */,
 				48D3C30C211859BC004A04D2 /* ZLKDJPainter.h */,
+				48D3C308211859BC004A04D2 /* ZLKDJPainter.m */,
 				48D3C30D211859BC004A04D2 /* ZLRSIGridePainter.h */,
+				48D3C309211859BC004A04D2 /* ZLRSIGridePainter.m */,
 				48D3C30E211859BC004A04D2 /* ZLRSIPainter.h */,
+				48D3C30A211859BC004A04D2 /* ZLRSIPainter.m */,
 			);
 			path = AssistPainter;
 			sourceTree = "<group>";
@@ -380,9 +379,9 @@
 		48D3C30F211859BC004A04D2 /* CandlePainter */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C310211859BC004A04D2 /* ZLCandlePainter.h */,
 				48D3C311211859BC004A04D2 /* LZCandleGridePainter.h */,
 				48D3C312211859BC004A04D2 /* LZCandleGridePainter.m */,
+				48D3C310211859BC004A04D2 /* ZLCandlePainter.h */,
 				48D3C313211859BC004A04D2 /* ZLCandlePainter.m */,
 			);
 			path = CandlePainter;
@@ -391,9 +390,9 @@
 		48D3C317211859BC004A04D2 /* GuideTransformer */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C318211859BC004A04D2 /* Transformer */,
-				48D3C323211859BC004A04D2 /* Params */,
 				48D3C32E211859BC004A04D2 /* Model */,
+				48D3C323211859BC004A04D2 /* Params */,
+				48D3C318211859BC004A04D2 /* Transformer */,
 			);
 			path = GuideTransformer;
 			sourceTree = "<group>";
@@ -435,13 +434,11 @@
 		48D3C32E211859BC004A04D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C32F211859BC004A04D2 /* ZLGuideModel.m */,
-				48D3C330211859BC004A04D2 /* ZLGuideDataPack.m */,
-				48D3C331211859BC004A04D2 /* ZLGuideDataType.m */,
 				48D3C332211859BC004A04D2 /* GuideModel */,
-				48D3C33B211859BC004A04D2 /* ZLGuideDataType.h */,
 				48D3C33C211859BC004A04D2 /* ZLGuideDataPack.h */,
-				48D3C33D211859BC004A04D2 /* ZLGuideModel.h */,
+				48D3C330211859BC004A04D2 /* ZLGuideDataPack.m */,
+				48D3C33B211859BC004A04D2 /* ZLGuideDataType.h */,
+				48D3C331211859BC004A04D2 /* ZLGuideDataType.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -449,14 +446,16 @@
 		48D3C332211859BC004A04D2 /* GuideModel */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C333211859BC004A04D2 /* ZLGuideMAModel.m */,
-				48D3C334211859BC004A04D2 /* ZLGuideRSIModel.h */,
-				48D3C335211859BC004A04D2 /* ZLGuideKDJModel.m */,
-				48D3C336211859BC004A04D2 /* ZLGuideBOLLModel.m */,
-				48D3C337211859BC004A04D2 /* ZLGuideMAModel.h */,
-				48D3C338211859BC004A04D2 /* ZLGuideKDJModel.h */,
-				48D3C339211859BC004A04D2 /* ZLGuideRSIModel.m */,
 				48D3C33A211859BC004A04D2 /* ZLGuideBOLLModel.h */,
+				48D3C336211859BC004A04D2 /* ZLGuideBOLLModel.m */,
+				48D3C338211859BC004A04D2 /* ZLGuideKDJModel.h */,
+				48D3C335211859BC004A04D2 /* ZLGuideKDJModel.m */,
+				48D3C337211859BC004A04D2 /* ZLGuideMAModel.h */,
+				48D3C333211859BC004A04D2 /* ZLGuideMAModel.m */,
+				48D3C3842119349B004A04D2 /* ZLGuideModel.h */,
+				48D3C3852119349B004A04D2 /* ZLGuideModel.m */,
+				48D3C334211859BC004A04D2 /* ZLGuideRSIModel.h */,
+				48D3C339211859BC004A04D2 /* ZLGuideRSIModel.m */,
 			);
 			path = GuideModel;
 			sourceTree = "<group>";
@@ -497,16 +496,16 @@
 		48D3C350211859BC004A04D2 /* PaintView */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C351211859BC004A04D2 /* ZLPaintCore.m */,
-				48D3C352211859BC004A04D2 /* ZLPaintAssistScene.m */,
-				48D3C353211859BC004A04D2 /* ZLBasePaintView.m */,
-				48D3C354211859BC004A04D2 /* ZLPaintMainScene.h */,
-				48D3C355211859BC004A04D2 /* ZLPaintView.m */,
-				48D3C356211859BC004A04D2 /* ZLPaintCore.h */,
-				48D3C357211859BC004A04D2 /* ZLPaintAssistScene.h */,
 				48D3C358211859BC004A04D2 /* ZLBasePaintView.h */,
-				48D3C359211859BC004A04D2 /* ZLPaintView.h */,
+				48D3C353211859BC004A04D2 /* ZLBasePaintView.m */,
+				48D3C357211859BC004A04D2 /* ZLPaintAssistScene.h */,
+				48D3C352211859BC004A04D2 /* ZLPaintAssistScene.m */,
+				48D3C356211859BC004A04D2 /* ZLPaintCore.h */,
+				48D3C351211859BC004A04D2 /* ZLPaintCore.m */,
+				48D3C354211859BC004A04D2 /* ZLPaintMainScene.h */,
 				48D3C35A211859BC004A04D2 /* ZLPaintMainScene.m */,
+				48D3C359211859BC004A04D2 /* ZLPaintView.h */,
+				48D3C355211859BC004A04D2 /* ZLPaintView.m */,
 			);
 			path = PaintView;
 			sourceTree = "<group>";
@@ -597,7 +596,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D3C1BD2118556E004A04D2 /* Info.plist in Resources */,
 				48D3C1BA2118556E004A04D2 /* Main.storyboard in Resources */,
 				48D3C37B211859BC004A04D2 /* N225.xml in Resources */,
 				48D3C1B82118556E004A04D2 /* Assets.xcassets in Resources */,
@@ -662,6 +660,7 @@
 			files = (
 				48D3C363211859BC004A04D2 /* ZLCandlePainter.m in Sources */,
 				48D3C374211859BC004A04D2 /* ZLGuideKDJModel.m in Sources */,
+				48D3C3862119349C004A04D2 /* ZLGuideModel.m in Sources */,
 				48D3C369211859BC004A04D2 /* ZLDataTransformer.m in Sources */,
 				48D3C361211859BC004A04D2 /* ZLRSIPainter.m in Sources */,
 				48D3C301211857BD004A04D2 /* UIView+QuickNew.m in Sources */,
@@ -703,7 +702,6 @@
 				48D3C35F211859BC004A04D2 /* ZLKDJPainter.m in Sources */,
 				48D3C36D211859BC004A04D2 /* ZLGuideParam.m in Sources */,
 				48D3C36B211859BC004A04D2 /* ZLMAParam.m in Sources */,
-				48D3C370211859BC004A04D2 /* ZLGuideModel.m in Sources */,
 				48D3C2F9211857BD004A04D2 /* NSDictionary+Safe.m in Sources */,
 				48D3C376211859BC004A04D2 /* ZLGuideRSIModel.m in Sources */,
 				48D3C2FC211857BD004A04D2 /* NSObject+ZLEX.m in Sources */,

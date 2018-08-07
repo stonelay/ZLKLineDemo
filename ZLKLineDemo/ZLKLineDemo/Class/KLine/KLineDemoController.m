@@ -10,10 +10,7 @@
 
 #import "ZLPaintView.h"
 
-#import "KLineModel.h"
-#import "ZLQuoteDataCenter.h"
-
-@interface KLineDemoController ()<NSXMLParserDelegate>
+@interface KLineDemoController ()
 
 @property (nonatomic, strong) ZLPaintView *paintView;
 

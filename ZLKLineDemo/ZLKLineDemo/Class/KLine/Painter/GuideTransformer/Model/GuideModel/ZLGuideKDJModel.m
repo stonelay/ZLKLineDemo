@@ -10,6 +10,11 @@
 
 @implementation ZLGuideKDJModel
 
+- (void)initDefault {
+    [super initDefault];
+    self.name = kGUIDE_ID_KDJ;
+}
+
 - (CGFloat)maxData {
     return MAX(self.kData, MAX(self.dData, self.jData));
 }

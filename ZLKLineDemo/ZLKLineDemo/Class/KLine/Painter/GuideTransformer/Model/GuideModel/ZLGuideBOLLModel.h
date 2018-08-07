@@ -6,16 +6,14 @@
 //  Copyright © 2018年 Zhanglei. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ZLGuideModel.h"
 
-@interface ZLGuideBOLLModel : NSObject
+@interface ZLGuideBOLLModel : ZLGuideModel
 
 @property (nonatomic, assign) CGFloat period;
 
 @property (nonatomic, assign) CGFloat midData;
 @property (nonatomic, assign) CGFloat upData;
 @property (nonatomic, assign) CGFloat lowData;
-
-@property (nonatomic, assign) BOOL isNeedDraw;
 
 @end
