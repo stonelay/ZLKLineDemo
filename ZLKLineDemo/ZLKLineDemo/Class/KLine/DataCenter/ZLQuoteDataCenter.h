@@ -15,5 +15,7 @@
 + (instancetype)shareInstance;
 
 - (void)loadHisData;
+- (void)loadMoreHisData;
+- (BOOL)isLastData;
 
 @end

@@ -21,6 +21,8 @@
 @property (nonatomic, strong) ZLPaintMainScene *mainPaintScene;
 @property (nonatomic, strong) ZLPaintAssistScene *assistPaintScene;
 
+@property (nonatomic, assign) BOOL isAllLoad;
+
 @end
 
 @implementation ZLPaintView
@@ -43,22 +45,41 @@
     
     self.mainPaintScene = [[ZLPaintMainScene alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height / 3 * 2)];
     self.mainPaintScene.paintCore = self.paintCore;
-//    self.mainPaintScene.degeInsets = UIEdgeInsetsMake(10, 0, 0, 0);
     
     self.assistPaintScene = [[ZLPaintAssistScene alloc] initWithFrame:CGRectMake(0, self.height / 3 * 2, self.width, self.height / 3)];
     self.assistPaintScene.paintCore = self.paintCore;
-//    self.assistPaintScene.degeInsets = UIEdgeInsetsMake(InofrHeightKDJ * SCALE, 0, 30, 0);
     
     [self addSubview:self.mainPaintScene];
     [self addSubview:self.assistPaintScene];
 }
 
 - (void)loadData {
-    [SVProgressHUD show];
+    [SVProgressHUD showWithStatus:@"初始化数据"];
     self.userInteractionEnabled = NO;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [SVProgressHUD dismiss];
         self.userInteractionEnabled = YES;
+        self.paintCore.drawDataArray = [ZLQuoteDataCenter shareInstance].hisKLineDataArray;
+        [self draw];
+    });
+}
+
+- (void)loadMoreData {
+    if (self.isAllLoad) {
+        return;
+    }
+    [SVProgressHUD showWithStatus:@"加载更多历史数据"];
+    self.userInteractionEnabled = NO;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD dismiss];
+        self.userInteractionEnabled = YES;
+        
+        if ([[ZLQuoteDataCenter shareInstance] isLastData]) {
+            [@"没有更多行情" showNotice];
+            self.isAllLoad = YES;
+            return;
+        }
+        [[ZLQuoteDataCenter shareInstance] loadMoreHisData];
         self.paintCore.drawDataArray = [ZLQuoteDataCenter shareInstance].hisKLineDataArray;
         [self draw];
     });
@@ -94,6 +115,10 @@
 - (void)panEndedPoint:(CGPoint)point {
     [self.mainPaintScene panEndedPoint:point];
     [self.assistPaintScene panEndedPoint:point];
+    
+    if (self.paintCore.curIndex < 20) {
+        [self loadMoreData];
+    }
 }
 
 // pinch
@@ -108,6 +133,10 @@
 - (void)pinchEndedScale:(CGFloat)scale {
     [self.mainPaintScene pinchEndedScale:scale];
     [self.assistPaintScene pinchEndedScale:scale];
+    
+    if (self.paintCore.isShowAll) {
+        [self loadMoreData];
+    }
 }
 
 // longPress

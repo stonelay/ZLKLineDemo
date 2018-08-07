@@ -85,6 +85,8 @@ static CGFloat inline getAssistInforHeight(GuidePaintAssistType assistType){
 @property (nonatomic, assign) GuidePaintMainType paintMainType;
 @property (nonatomic, assign) GuidePaintAssistType paintAssistType;
 
+@property (nonatomic, assign, readonly) NSInteger curIndex;   // pan 中当前index
+
 - (void)editIndex;
 - (void)editScale;
 

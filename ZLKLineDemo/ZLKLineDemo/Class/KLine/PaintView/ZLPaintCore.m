@@ -213,6 +213,10 @@
 - (void)editScale {self.oriXScale = self.curXScale;}
 
 - (void)setDrawDataArray:(NSMutableArray *)drawDataArray {
+    if (_drawDataArray) {
+        self.oriIndex += drawDataArray.count - _drawDataArray.count;
+    }
+    
     _drawDataArray = drawDataArray;
     [self.guideManager updateWithChartData:drawDataArray];
 }

@@ -486,8 +486,8 @@
 		48D3C348211859BC004A04D2 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				48D3C349211859BC004A04D2 /* MockServer.m */,
 				48D3C34A211859BC004A04D2 /* MockServer.h */,
+				48D3C349211859BC004A04D2 /* MockServer.m */,
 				48D3C34B211859BC004A04D2 /* N225.xml */,
 			);
 			path = Server;

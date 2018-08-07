@@ -39,12 +39,15 @@
 //    [self updateGuideWithData:self.hisKLineDataArray];
 }
 
-//- (void)updateGuideWithData:(NSArray *)data {
-//    [self.guideManager updateWithChartData:data];
-//}
+- (void)loadMoreHisData {
+    NSMutableArray *nArray = [[MockServer getMoreMockHisData] mutableCopy];
+    [nArray addObjectsFromArray:self.hisKLineDataArray];
+    self.hisKLineDataArray = nArray;
+}
 
-#pragma mark - property
-
+- (BOOL)isLastData {
+    return [MockServer isLastData];
+}
 
 @end
 

@@ -10,6 +10,8 @@
 
 @interface MockServer : NSObject
 
++ (BOOL)isLastData;
 + (NSArray *)getMockHisData;
++ (NSArray *)getMoreMockHisData;
 
 @end

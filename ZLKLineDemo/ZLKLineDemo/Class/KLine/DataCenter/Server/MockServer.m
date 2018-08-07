@@ -29,7 +29,21 @@
 }
 
 + (NSArray *)getMockHisData {
+    // 模拟服务器
     [[MockServer shareInstance] loadData];
+    return [MockServer shareInstance].mockHisData;
+}
+
+static int moreCount = 0;
+static int const maxCount = 2;
++ (BOOL)isLastData {
+    return moreCount >= maxCount;
+}
+
++ (NSArray *)getMoreMockHisData {
+    // 模拟获取更多
+    if ([self isLastData]) return nil;
+    moreCount++;
     return [MockServer shareInstance].mockHisData;
 }
 
@@ -58,7 +72,6 @@
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
     self.mockHisData = [[self.tempArray reverseObjectEnumerator] allObjects];
 }
-
 
 - (NSMutableArray *)tempArray {
     if (!_tempArray) {
