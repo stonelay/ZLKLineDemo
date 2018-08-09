@@ -52,10 +52,12 @@
 
 #pragma mark - quotelistner
 - (void)recQuoteData:(ZLQuoteNode *)quoteNode {
-    self.quoteNoticeLabel.text = quoteNode.nodeDescription;
-    [self.quoteNoticeLabel sizeToFit];
-    self.quoteNoticeLabel.right = SCREENWIDTH - 20 * SCALE;
-    self.quoteNoticeLabel.top = 20;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.quoteNoticeLabel.text = quoteNode.nodeDescription;
+        [self.quoteNoticeLabel sizeToFit];
+        self.quoteNoticeLabel.right = SCREENWIDTH - 20 * SCALE;
+        self.quoteNoticeLabel.top = 20;
+    });
 }
 
 @end

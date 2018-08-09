@@ -58,16 +58,19 @@
 }
 
 - (void)handleNewQuoteEvent:(NSNotification *)notify {
-    ZLQuoteNode *quoteNode = notify.object;
-    if(!quoteNode || ![quoteNode isKindOfClass:[ZLQuoteNode class]]) {
-        NSLog(@"获取的quote 未知错误.");
-        return;
-    }
-    [self fireQuoteData:quoteNode];
+    // 如果是真实环境， 应该 是异步获取数据的
+    // 这里是模拟异步获取行情
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        ZLQuoteNode *quoteNode = notify.object;
+        if(!quoteNode || ![quoteNode isKindOfClass:[ZLQuoteNode class]]) {
+            NSLog(@"获取的quote 未知错误.");
+            return;
+        }
+        [self fireQuoteData:quoteNode];
+    });
 }
 
 - (void)fireQuoteData:(ZLQuoteNode *)quoteNode {
-    [NSThread sleepForTimeInterval:0.5f];
     if (!self.quoteListeners || self.quoteListeners.count == 0) {
         return;
     }

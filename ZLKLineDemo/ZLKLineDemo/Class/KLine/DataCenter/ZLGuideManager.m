@@ -53,6 +53,7 @@
 
 #pragma mark - update
 - (void)updateWithChartData:(NSArray *)chartData {
+    NSLog(@"update");
     for (GuidePaintMainType i = GuidePaintMainTypeMA; i < GuidePaintMainTypeALL; i <<= 1) {
         NSString *guideID = [ZLGuideDataType getNameByPaintMainType:i];
         [self updateChartData:chartData withGuideID:guideID];
