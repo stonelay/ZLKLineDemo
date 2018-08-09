@@ -9,10 +9,11 @@
 #import "ZLQuoteDataCenter.h"
 #import "MockServer.h"
 #import "ZLGuideManager.h"
+#import "ZLQuoteNode.h"
 
 @interface ZLQuoteDataCenter()
 
-//@property (nonatomic, strong) ZLGuideManager *guideManager;
+@property (nonatomic, strong) NSMutableArray *quoteListeners;
 
 @end
 
@@ -30,24 +31,79 @@
 - (instancetype)init {
     if (self = [super init]) {
         [self loadHisData];
+        [self addListener];
     }
     return self;
 }
 
 - (void)loadHisData {
-    self.hisKLineDataArray = [[MockServer getMockHisData] mutableCopy];
-//    [self updateGuideWithData:self.hisKLineDataArray];
+    // 模拟获取 hisdata
+    self.hisKLineDataArray = [[[MockServer shareInstance] loadData] mutableCopy];
+//    [DefaultNotificationCenter postNotificationName:LoadHisDataNotification object:nil];
 }
 
 - (void)loadMoreHisData {
-    NSMutableArray *nArray = [[MockServer getMoreMockHisData] mutableCopy];
-    [nArray addObjectsFromArray:self.hisKLineDataArray];
-    self.hisKLineDataArray = nArray;
+    // 模拟获取 更多 hisdata
+    self.hisKLineDataArray = [[[MockServer shareInstance] loadMore] mutableCopy];
+//    [DefaultNotificationCenter postNotificationName:LoadHisDataNotification object:nil];
 }
 
 - (BOOL)isLastData {
-    return [MockServer isLastData];
+    // 一个 标识位
+    return [MockServer shareInstance].isLastData;
 }
+
+- (void)addListener {
+    [DefaultNotificationCenter addObserver:self selector:@selector(handleNewQuoteEvent:) name:HandleNewQuoteEventNotification object:nil];
+}
+
+- (void)handleNewQuoteEvent:(NSNotification *)notify {
+    ZLQuoteNode *quoteNode = notify.object;
+    if(!quoteNode || ![quoteNode isKindOfClass:[ZLQuoteNode class]]) {
+        NSLog(@"获取的quote 未知错误.");
+        return;
+    }
+    [self fireQuoteData:quoteNode];
+}
+
+- (void)fireQuoteData:(ZLQuoteNode *)quoteNode {
+    [NSThread sleepForTimeInterval:0.5f];
+    if (!self.quoteListeners || self.quoteListeners.count == 0) {
+        return;
+    }
+    
+    @synchronized(self.quoteListeners){
+        for (id<QuoteListener>listener in self.quoteListeners) {
+            [listener recQuoteData:quoteNode];
+        }
+    }
+}
+
+- (void)addQuoteListener:(id<QuoteListener>)listener {
+    @synchronized(self.quoteListeners){
+        if (![self.quoteListeners containsObject:listener]) {
+            [self.quoteListeners addObject:listener];
+        }
+    }
+}
+
+- (void)removeQuoteListener:(id<QuoteListener>)listener {
+    if (listener && [self.quoteListeners containsObject:listener]) {
+        @synchronized(self.quoteListeners){
+            if ([self.quoteListeners containsObject:listener]) {
+                [self.quoteListeners removeObject:listener];
+            }
+        }
+    }
+}
+
+- (NSMutableArray *)quoteListeners {
+    if (!_quoteListeners) {
+        _quoteListeners = [[NSMutableArray alloc] init];
+    }
+    return _quoteListeners;
+}
+
 
 @end
 

@@ -38,7 +38,7 @@
     double j = 0.0;
     for (int i = 0; i < chartDataArray.count; i++) {
         KLineModel *cModel = [chartDataArray objectAtIndex:i];
-        int sIndex = MAX(i, i - (n - 1));
+        int sIndex = MAX(0, i - (n - 1));
         int eIndex = i;
         
         double min = INT32_MAX;

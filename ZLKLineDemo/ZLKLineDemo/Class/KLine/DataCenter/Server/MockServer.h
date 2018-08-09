@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class ZLQuoteNode;
+
 @interface MockServer : NSObject
 
-+ (BOOL)isLastData;
-+ (NSArray *)getMockHisData;
-+ (NSArray *)getMoreMockHisData;
++ (instancetype)shareInstance;
+
+- (BOOL)isLastData;
+//- (ZLQuoteNode *)getMockQuoteNode;
+
+
+- (NSArray *)loadData;
+- (NSArray *)loadMore;
 
 @end

@@ -47,10 +47,6 @@
     return model;
 }
 
-+ (SMaximum *)fixMaximum:(SMaximum *)obj1 maximum:(SMaximum *)obj2 {
-    return [SMaximum initWithMax:MAX(obj1.max, obj2.max) min:MIN(obj1.min, obj2.min)];
-}
-
 - (SMaximum *)fixMaximum:(SMaximum *)maximum {
     return [SMaximum initWithMax:MAX(self.max, maximum.max) min:MIN(self.min, maximum.min)];
 }

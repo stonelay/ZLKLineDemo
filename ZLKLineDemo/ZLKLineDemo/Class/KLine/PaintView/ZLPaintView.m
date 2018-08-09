@@ -13,8 +13,10 @@
 #import "ZLPaintAssistScene.h"
 
 #import "ZLQuoteDataCenter.h"
+#import "ZLQuoteNode.h"
+#import "KLineModel.h"
 
-@interface ZLPaintView()
+@interface ZLPaintView()<QuoteListener>
 
 @property (nonatomic, strong) ZLPaintCore *paintCore;
 
@@ -51,6 +53,7 @@
     
     [self addSubview:self.mainPaintScene];
     [self addSubview:self.assistPaintScene];
+    
 }
 
 - (void)loadData {
@@ -61,6 +64,7 @@
         self.userInteractionEnabled = YES;
         self.paintCore.drawDataArray = [ZLQuoteDataCenter shareInstance].hisKLineDataArray;
         [self draw];
+        [[ZLQuoteDataCenter shareInstance] addQuoteListener:self];
     });
 }
 
@@ -85,6 +89,43 @@
     });
 }
 
+- (void)recQuoteData:(ZLQuoteNode *)quoteNode {
+    // TODO 这里需要判断 是否是该商品， 周期判断，行情是否是在这个节点中，是否要新建节点 等处理
+    KLineModel *lastModel = [[self.paintCore.drawDataArray objectAtIndex:self.paintCore.drawDataArray.count - 1] copy];
+    if (!lastModel) return;
+    
+    // 这里只做了模拟处理，实际上需要 判断周期(分线，时线，日线，周线等),判断时间断
+    if ([lastModel.date isEqualToString:quoteNode.tradeDay]) {
+        // 同一个时间段 做融合处理
+        if (lastModel.high < quoteNode.bid) {
+            lastModel.high = quoteNode.bid;
+        }
+        
+        if (lastModel.low > quoteNode.bid) {
+            lastModel.low = quoteNode.bid;
+        }
+        
+        lastModel.close = quoteNode.bid;
+        [self.paintCore.drawDataArray setObject:lastModel atIndexedSubscript:self.paintCore.drawDataArray.count - 1];
+    } else {
+        // 不是一个时间段 新建节点
+        KLineModel *newModel = [[KLineModel alloc] init];
+        newModel.low = quoteNode.bid;
+        newModel.high = quoteNode.bid;
+        newModel.open = quoteNode.bid;
+        newModel.close = quoteNode.bid;
+        newModel.date = quoteNode.tradeDay;
+
+        NSMutableArray *tArray = self.paintCore.drawDataArray.mutableCopy;
+        [tArray addObject:newModel];
+        self.paintCore.drawDataArray = tArray;
+    }
+    
+    // 新增节点时才需要绘制
+    if (self.paintCore.isShowLast) {
+        [self draw];
+    }
+}
 
 #pragma mark - override
 - (void)draw {

@@ -37,8 +37,8 @@
     CGFloat lowerY = (sHigherPrice - curLowerPrice) / unitValue;
     
     [self addLongitudeWithPrice:curHigherPrice positionY:higherY];
-    [self addLongitudeWithPrice:(curHigherPrice + curLowerPrice) / 3 * 1 positionY:(higherY + lowerY) / 3 * 1];
-    [self addLongitudeWithPrice:(curHigherPrice + curLowerPrice) / 3 * 2 positionY:(higherY + lowerY) / 3 * 2];
+    [self addLongitudeWithPrice:curLowerPrice + (curHigherPrice - curLowerPrice) / 3 * 1 positionY:higherY + (lowerY - higherY) / 3 * 1];
+    [self addLongitudeWithPrice:curLowerPrice + (curHigherPrice - curLowerPrice) / 3 * 2 positionY:higherY + (lowerY - higherY) / 3 * 2];
     [self addLongitudeWithPrice:curLowerPrice positionY:lowerY];
 }
 

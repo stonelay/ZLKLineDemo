@@ -17,6 +17,8 @@
 #import "ZLKDJParam.h"
 #import "ZLRSIParam.h"
 
+#import "ZLQuoteDataCenter.h"
+
 #define UninitializedIndex   -1
 
 
@@ -178,6 +180,10 @@
     return self.arrayMaxCount == self.showCount;
 }
 
+- (BOOL)isShowLast {
+    return (self.oriIndex + self.showCount) == self.arrayMaxCount;
+}
+
 - (CGFloat)cellWidth {
     return self.kLineCellWidth * self.curXScale;
 }
@@ -216,7 +222,7 @@
     if (_drawDataArray) {
         self.oriIndex += drawDataArray.count - _drawDataArray.count;
     }
-    
+
     _drawDataArray = drawDataArray;
     [self.guideManager updateWithChartData:drawDataArray];
 }

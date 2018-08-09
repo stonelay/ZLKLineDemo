@@ -100,7 +100,8 @@ NSLog((@"[文件名:%s] Error Log:" format), __FILE__, ##__VA_ARGS__);
 /** notification **/
 #pragma mark - notification
 #define DefaultNotificationCenter [NSNotificationCenter defaultCenter]
-#define TimerCellDeallocNotification @"TimerCellDeallocNotification"
+#define HandleNewQuoteEventNotification @"HandleNewQuoteEventNotification"
+#define LoadHisDataNotification @"LoadHisDataNotification"
 
 //weakSelf & strongSelf
 #define weakSelf( x ) \

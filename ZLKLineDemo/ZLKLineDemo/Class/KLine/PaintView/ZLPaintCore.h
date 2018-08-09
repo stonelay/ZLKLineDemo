@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "ZLGuideDataPack.h"
+@class KLineModel;
 
 static const CGFloat InforHeightNONE    = 10;
 static const CGFloat InforHeightKDJ     = 40;
@@ -64,6 +65,7 @@ static CGFloat inline getAssistInforHeight(GuidePaintAssistType assistType){
 @property (nonatomic, assign, readonly) CGFloat cellWidth;
 
 @property (nonatomic, assign, readonly) BOOL isShowAll;
+@property (nonatomic, assign, readonly) BOOL isShowLast;
 
 // ------ scene candle base ------ //
 @property (nonatomic, assign, readonly) NSInteger arrayMaxCount; // 最大展示个数

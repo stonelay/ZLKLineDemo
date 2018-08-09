@@ -9,10 +9,14 @@
 #import "MockServer.h"
 #import "KLineModel.h"
 
+#import "ZLQuoteNode.h"
 
-@interface MockServer()<NSXMLParserDelegate>
+#import "DateFormat.h"
+#import "ZLDataParser.h"
+@interface MockServer()
 
-@property (nonatomic, strong) NSMutableArray *tempArray;
+@property (nonatomic, strong) ZLQuoteNode *mockQuoteNode;
+
 @property (nonatomic, strong) NSArray *mockHisData;
 
 @end
@@ -28,56 +32,68 @@
     return instance;
 }
 
-+ (NSArray *)getMockHisData {
-    // 模拟服务器
-    [[MockServer shareInstance] loadData];
-    return [MockServer shareInstance].mockHisData;
+- (instancetype)init {
+    if (self = [super init]) {
+        [self mockSendQuoteData];
+    }
+    return self;
+}
+
+- (NSArray *)loadData {
+    // 模拟数据
+    ZLDataParser *parser = [[ZLDataParser alloc] init];
+    self.mockHisData = [parser parseHisData];
+    return self.mockHisData;
+}
+
+- (NSArray *)loadMore {
+    if ([self isLastData]) return self.mockHisData;
+    moreCount++;
+    ZLDataParser *parser = [[ZLDataParser alloc] init];
+    self.mockHisData = [[parser parseHisData] arrayByAddingObjectsFromArray:self.mockHisData];
+    return self.mockHisData;
 }
 
 static int moreCount = 0;
 static int const maxCount = 2;
-+ (BOOL)isLastData {
+- (BOOL)isLastData {
     return moreCount >= maxCount;
 }
 
-+ (NSArray *)getMoreMockHisData {
-    // 模拟获取更多
-    if ([self isLastData]) return nil;
-    moreCount++;
-    return [MockServer shareInstance].mockHisData;
+// 模拟实时发送交易行情
+- (void)mockSendQuoteData {
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        for (int i = 0; i < 10000; i++) {
+            sleep(2);
+            ZLQuoteNode *node = [self getMockQuoteNode];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [DefaultNotificationCenter postNotificationName:HandleNewQuoteEventNotification object:node];
+            });
+        }
+    });
 }
 
-#pragma mark - parsedelegate
-- (void)loadData {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"N225"
-                                                         ofType:@"xml"];
-    NSURL *url = [NSURL fileURLWithPath:filePath];
-    NSXMLParser *parser = [[[NSXMLParser alloc] init] initWithContentsOfURL:url];
-    parser.delegate = self;
-    [parser parse];
-}
-
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
-    if ([elementName isEqualToString:@"item"]) {
-        KLineModel *data = [[KLineModel alloc] init];
-        data.open = [[attributeDict objectForKey:@"open"] floatValue];
-        data.high = [[attributeDict objectForKey:@"high"] floatValue];
-        data.low =  [[attributeDict objectForKey:@"low"] floatValue];
-        data.close = [[attributeDict objectForKey:@"close"] floatValue];
-        data.date = [attributeDict objectForKey:@"date"];
-        [self.tempArray addObject:data];
+static float lastPercent = 1.0;
+static NSDate *beginDate;
+- (ZLQuoteNode *)getMockQuoteNode {
+    if (!beginDate) {
+        beginDate = [NSDate new];
     }
+    KLineModel *lastModel = [[self.mockHisData objectAtIndex:self.mockHisData.count - 1] copy];
+    ZLQuoteNode *newNode = [[ZLQuoteNode alloc] init];
+    double randomPercent = (50 - random() % 100) / 10000.0;
+    lastPercent *= (1 + randomPercent);
+//    NSLog(@"%f", lastPercent);
+    newNode.bid = lastModel.close * lastPercent;
+    newNode.ask = lastModel.close * lastPercent;
+    
+    // 假的数据， 一秒等于一小时
+    NSTimeInterval crossTime = [[NSDate new] timeIntervalSinceDate:beginDate];
+    NSDate *mockDate = [NSDate dateWithTimeIntervalSinceNow:crossTime * 60 * 60];
+    newNode.tradeDay = [DateFormat stringFromDate:mockDate withFormat:@"YYYYMMdd"];
+    
+    return newNode;
 }
 
-- (void)parserDidEndDocument:(NSXMLParser *)parser {
-    self.mockHisData = [[self.tempArray reverseObjectEnumerator] allObjects];
-}
-
-- (NSMutableArray *)tempArray {
-    if (!_tempArray) {
-        _tempArray = [[NSMutableArray alloc] init];
-    }
-    return _tempArray;
-}
 
 @end

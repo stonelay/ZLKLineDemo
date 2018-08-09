@@ -68,6 +68,10 @@
 		48D3C382211859BC004A04D2 /* ZLPaintMainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C35A211859BC004A04D2 /* ZLPaintMainScene.m */; };
 		48D3C383211859BC004A04D2 /* KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C35C211859BC004A04D2 /* KLineModel.m */; };
 		48D3C3862119349C004A04D2 /* ZLGuideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C3852119349B004A04D2 /* ZLGuideModel.m */; };
+		48D3C3892119A9A5004A04D2 /* ZLQuoteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C3882119A9A5004A04D2 /* ZLQuoteNode.m */; };
+		48D3C38F211ACE4B004A04D2 /* DecimalUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C38B211ACE4A004A04D2 /* DecimalUtil.m */; };
+		48D3C390211ACE4B004A04D2 /* DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C38C211ACE4A004A04D2 /* DateFormat.m */; };
+		48D3C393211AFA17004A04D2 /* ZLDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D3C392211AFA17004A04D2 /* ZLDataParser.m */; };
 		C5E420434A830FBAEAD75B17 /* libPods-ZLKLineDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8259BE719CBDAB0E3F1DE8E8 /* libPods-ZLKLineDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -200,6 +204,14 @@
 		48D3C35D211859BC004A04D2 /* KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineModel.h; sourceTree = "<group>"; };
 		48D3C3842119349B004A04D2 /* ZLGuideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLGuideModel.h; sourceTree = "<group>"; };
 		48D3C3852119349B004A04D2 /* ZLGuideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLGuideModel.m; sourceTree = "<group>"; };
+		48D3C3872119A9A5004A04D2 /* ZLQuoteNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLQuoteNode.h; sourceTree = "<group>"; };
+		48D3C3882119A9A5004A04D2 /* ZLQuoteNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLQuoteNode.m; sourceTree = "<group>"; };
+		48D3C38B211ACE4A004A04D2 /* DecimalUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalUtil.m; sourceTree = "<group>"; };
+		48D3C38C211ACE4A004A04D2 /* DateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormat.m; sourceTree = "<group>"; };
+		48D3C38D211ACE4A004A04D2 /* DecimalUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalUtil.h; sourceTree = "<group>"; };
+		48D3C38E211ACE4A004A04D2 /* DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormat.h; sourceTree = "<group>"; };
+		48D3C391211AFA17004A04D2 /* ZLDataParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLDataParser.h; sourceTree = "<group>"; };
+		48D3C392211AFA17004A04D2 /* ZLDataParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLDataParser.m; sourceTree = "<group>"; };
 		8259BE719CBDAB0E3F1DE8E8 /* libPods-ZLKLineDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZLKLineDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE2F91DB0A2A8E8C11F7550 /* Pods-ZLKLineDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLKLineDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLKLineDemo/Pods-ZLKLineDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,6 +296,7 @@
 		48D3C27E211857BC004A04D2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				48D3C38A211ACE4A004A04D2 /* DateFormat */,
 				48D3C281211857BC004A04D2 /* Safe */,
 				48D3C2A0211857BD004A04D2 /* AppMacro.h */,
 				48D3C2A1211857BD004A04D2 /* CALayer+ZLEX.h */,
@@ -479,6 +492,8 @@
 				48D3C347211859BC004A04D2 /* ZLGuideManager.m */,
 				48D3C346211859BC004A04D2 /* ZLQuoteDataCenter.h */,
 				48D3C34C211859BC004A04D2 /* ZLQuoteDataCenter.m */,
+				48D3C3872119A9A5004A04D2 /* ZLQuoteNode.h */,
+				48D3C3882119A9A5004A04D2 /* ZLQuoteNode.m */,
 			);
 			path = DataCenter;
 			sourceTree = "<group>";
@@ -489,6 +504,8 @@
 				48D3C34A211859BC004A04D2 /* MockServer.h */,
 				48D3C349211859BC004A04D2 /* MockServer.m */,
 				48D3C34B211859BC004A04D2 /* N225.xml */,
+				48D3C391211AFA17004A04D2 /* ZLDataParser.h */,
+				48D3C392211AFA17004A04D2 /* ZLDataParser.m */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -517,6 +534,17 @@
 				48D3C35D211859BC004A04D2 /* KLineModel.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		48D3C38A211ACE4A004A04D2 /* DateFormat */ = {
+			isa = PBXGroup;
+			children = (
+				48D3C38B211ACE4A004A04D2 /* DecimalUtil.m */,
+				48D3C38C211ACE4A004A04D2 /* DateFormat.m */,
+				48D3C38D211ACE4A004A04D2 /* DecimalUtil.h */,
+				48D3C38E211ACE4A004A04D2 /* DateFormat.h */,
+			);
+			path = DateFormat;
 			sourceTree = "<group>";
 		};
 		7071B7D736516A97C06C35AF /* Frameworks */ = {
@@ -666,6 +694,7 @@
 				48D3C301211857BD004A04D2 /* UIView+QuickNew.m in Sources */,
 				48D3C360211859BC004A04D2 /* ZLRSIGridePainter.m in Sources */,
 				48D3C2A6211857BD004A04D2 /* ViewController.m in Sources */,
+				48D3C38F211ACE4B004A04D2 /* DecimalUtil.m in Sources */,
 				48D3C2FF211857BD004A04D2 /* CALayer+ZLEX.m in Sources */,
 				48D3C372211859BC004A04D2 /* ZLGuideDataType.m in Sources */,
 				48D3C2F6211857BD004A04D2 /* NSMutableArray+Safe.m in Sources */,
@@ -689,7 +718,9 @@
 				48D3C375211859BC004A04D2 /* ZLGuideBOLLModel.m in Sources */,
 				48D3C2FB211857BD004A04D2 /* UIView+ZLEX.m in Sources */,
 				48D3C2FE211857BD004A04D2 /* NSString+ZLEX.m in Sources */,
+				48D3C393211AFA17004A04D2 /* ZLDataParser.m in Sources */,
 				48D3C2FA211857BD004A04D2 /* NSArray+Safe.m in Sources */,
+				48D3C3892119A9A5004A04D2 /* ZLQuoteNode.m in Sources */,
 				48D3C37C211859BC004A04D2 /* ZLQuoteDataCenter.m in Sources */,
 				48D3C2F5211857BD004A04D2 /* NSObject+Safe.m in Sources */,
 				48D3C37D211859BC004A04D2 /* KLineDemoController.m in Sources */,
@@ -710,6 +741,7 @@
 				48D3C36E211859BC004A04D2 /* ZLBOLLParam.m in Sources */,
 				48D3C303211857BD004A04D2 /* GLLoadTool.m in Sources */,
 				48D3C373211859BC004A04D2 /* ZLGuideMAModel.m in Sources */,
+				48D3C390211ACE4B004A04D2 /* DateFormat.m in Sources */,
 				48D3C1BC2118556E004A04D2 /* AppDelegate.m in Sources */,
 				48D3C365211859BC004A04D2 /* ZLBasePainter.m in Sources */,
 				48D3C362211859BC004A04D2 /* LZCandleGridePainter.m in Sources */,

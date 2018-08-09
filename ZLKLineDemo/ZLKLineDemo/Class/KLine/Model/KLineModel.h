@@ -11,10 +11,12 @@
 @interface KLineModel : NSObject
 
 // k线数据 开高低收
-@property (assign, nonatomic) CGFloat high;
-@property (assign, nonatomic) CGFloat low;
-@property (assign, nonatomic) CGFloat open;
-@property (assign, nonatomic) CGFloat close;
-@property (copy,   nonatomic) NSString *date;
+@property (nonatomic, assign) CGFloat high;
+@property (nonatomic, assign) CGFloat low;
+@property (nonatomic, assign) CGFloat open;
+@property (nonatomic, assign) CGFloat close;
+@property (nonatomic, strong) NSString *date;
+
+- (instancetype)copy;
 
 @end

@@ -10,4 +10,14 @@
 
 @implementation KLineModel
 
+- (instancetype)copy {
+    KLineModel *model = [[KLineModel alloc] init];
+    model.high = self.high;
+    model.low = self.low;
+    model.open = self.open;
+    model.close = self.close;
+    model.date = self.date;
+    return model;
+}
+
 @end
