@@ -54,6 +54,7 @@
 - (void)recQuoteData:(ZLQuoteNode *)quoteNode {
     dispatch_async(dispatch_get_main_queue(), ^{
         self.quoteNoticeLabel.text = quoteNode.nodeDescription;
+        self.quoteNoticeLabel.textColor = ZLHEXCOLOR(arc4random() % 0xffffff);
         [self.quoteNoticeLabel sizeToFit];
         self.quoteNoticeLabel.right = SCREENWIDTH - 20 * SCALE;
         self.quoteNoticeLabel.top = 20;
