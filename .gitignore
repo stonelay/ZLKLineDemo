@@ -5,6 +5,7 @@
 ## Build generated
 build/
 DerivedData/
+/scripts
 
 ## Various settings
 *.pbxuser
@@ -35,8 +36,6 @@ xcuserdata/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
-
-# OpenGLDemo/Pods/
 
 # Carthage
 #
