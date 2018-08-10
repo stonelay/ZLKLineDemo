@@ -40,7 +40,7 @@
         kdjPainter.delegate = self;
         [tDic setObject:kdjPainter forKey:[ZLGuideDataType getNameByPaintAssistType:GuidePaintAssistTypeKDJ]];
         
-        // KDJ
+        // RSI
         ZLBasePainter *rsiPainter = [[ZLRSIPainter alloc] initWithPaintView:self];
         rsiPainter.dataSource = self;
         rsiPainter.delegate = self;
