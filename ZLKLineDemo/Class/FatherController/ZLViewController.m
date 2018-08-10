@@ -12,6 +12,11 @@
 
 @interface ZLViewController ()
 
+@property (nonatomic, strong) UIView *navBarContainer;
+@property (nonatomic, strong) UILabel *navTitleLabel;
+@property (nonatomic, strong) UIButton *leftButton;
+@property (nonatomic, strong) UIView *bottomLine;
+
 @end
 
 @implementation ZLViewController
@@ -19,75 +24,74 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = ZLWhiteColor;
+    [self createNavBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (NSString *)controllerTitle {
+    return [NSStringFromClass(self.class) stringByReplacingOccurrencesOfString:@"Controller" withString:@""];
+}
+
+- (UIImage *)leftImage {
+    return [UIImage imageNamed:@"icon_back"];
+}
+
+- (UIView *)navBarContainer {
+    if (!_navBarContainer) {
+        _navBarContainer = [[UIView alloc] init];
+        _navBarContainer.backgroundColor = ZLWhiteColor;
+        _navBarContainer.frame = CGRectMake(0, 0, SCREENWIDTH, 64);
+    }
+    return _navBarContainer;
+}
+
+- (UILabel *)navTitleLabel {
+    if (!_navTitleLabel) {
+        _navTitleLabel = [[UILabel alloc] init];
+        _navTitleLabel.textColor = ZLGray(34);
+        _navTitleLabel.font = ZLBoldFont(17);
+        _navTitleLabel.text = self.controllerTitle;
+        [_navTitleLabel sizeToFit];
+        _navTitleLabel.center = CGPointMake(SCREENWIDTH / 2, 20 + 22);
+    }
+    return _navTitleLabel;
+}
+
+- (UIButton *)leftButton {
+    if (!_leftButton) {
+        _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_leftButton setImage:self.leftImage forState:UIControlStateNormal];
+        _leftButton.tintColor = ZLWhiteColor;
+        _leftButton.frame = CGRectMake(0, 20, 44, 44);
+        [_leftButton addTarget:self action:@selector(leftBtnDidTouch) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _leftButton;
+}
+
+- (UIView *)bottomLine {
+    if (!_bottomLine) {
+        _bottomLine = [[UIView alloc] init];
+        _bottomLine.backgroundColor = ZLGray(240);
+        _bottomLine.frame = CGRectMake(0, self.navBarContainer.height - LINEWIDTH, self.navBarContainer.width, LINEWIDTH);
+    }
+    return _bottomLine;
 }
 
 #pragma mark - Public
-- (void)createNavBarWithTitle:(NSString *)title
-{
-    [self createNavBarWithTitle:title withLeft:nil];
-}
-
-- (void)createNavBarWithTitle:(NSString *)title withLeft:(UIImage *)leftImage {
-    // 父容器
-    UIView *navBarContainer = [[UIView alloc] init];
-    self.navBarContainer = navBarContainer;
-    [self.view addSubview:navBarContainer];
-    navBarContainer.backgroundColor = ZLWhiteColor;
-    navBarContainer.frame = CGRectMake(0, 0, SCREENWIDTH, 64);
-    //    navBarContainer.layer.masksToBounds = NO;
-    //    navBarContainer.layer.shadowColor = YPBlackColor.CGColor;
-    //    navBarContainer.layer.shadowOffset = CGSizeMake(0, 0.1);
-    //    navBarContainer.layer.shadowOpacity = 0.5;
-    //
-    
-    // 标题标签
-    UILabel *navTitleLabel = [[UILabel alloc] init];
-    [self.navBarContainer addSubview:navTitleLabel];
-    navTitleLabel.backgroundColor = ZLWhiteColor;
-    navTitleLabel.textColor = ZLRGB(34, 34, 34);
-    navTitleLabel.textAlignment = NSTextAlignmentCenter;
-    navTitleLabel.font = ZLBoldFont(17);
-    navTitleLabel.text = title;
-    navTitleLabel.height = 44;
-    
-    navTitleLabel.top = 20;
-//    CGSize size = CGSizeMake(MAXFLOAT, MAXFLOAT);
-//    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-//    attributes[NSFontAttributeName] = navTitleLabel.font;
-//    attributes[NSForegroundColorAttributeName] = navTitleLabel.textColor;
-//    size = [title boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
-    navTitleLabel.width = SCREENWIDTH;
-//    navTitleLabel.left = SCREENWIDTH * 0.5 - navTitleLabel.width * 0.5;
-    navTitleLabel.center = CGPointMake(SCREENWIDTH / 2, navTitleLabel.centerY);
-    
-    // 左侧按钮(固定)
-    if (leftImage) {
-        UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.navBarContainer addSubview:leftBtn];
-        [leftBtn setImage:leftImage forState:UIControlStateNormal];
-        leftBtn.tintColor = ZLWhiteColor;
-        leftBtn.frame = CGRectMake(0, 20, 44, 44);
-        [leftBtn addTarget:self action:@selector(leftBtnDidTouch) forControlEvents:UIControlEventTouchUpInside];
+- (void)createNavBar {
+    [self.view addSubview:self.navBarContainer];
+    [self.navBarContainer addSubview:self.navTitleLabel];
+    [self.navBarContainer addSubview:self.bottomLine];
+    if (self.leftImage) {
+        [self.view addSubview:self.leftButton];
     }
-    
-    // bottomLine
-    UIView *bottomLine = [[UIView alloc] init];
-    [self.navBarContainer addSubview:bottomLine];
-    bottomLine.backgroundColor = ZLRGB(240, 240, 240);
-    bottomLine.frame = CGRectMake(0, self.navBarContainer.height - 0.5, self.navBarContainer.width, 0.5);
-    
 }
 
 - (void)leftBtnDidTouch {
-    NSLog(@"left touch");
     [self.navigationController popViewControllerAnimated:YES];
 }
 

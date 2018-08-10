@@ -11,11 +11,8 @@
 @interface ZLViewController : UIViewController
 
 @property (nonatomic, strong) NSString *controllerTitle;
-@property (nonatomic, weak) UIView *navBarContainer;
+@property (nonatomic, strong) UIImage *leftImage;
 
 - (void)leftBtnDidTouch;
-
-- (void)createNavBarWithTitle:(NSString *)title;
-- (void)createNavBarWithTitle:(NSString *)title withLeft:(UIImage *)leftImage;
 
 @end
